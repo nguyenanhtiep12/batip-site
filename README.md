@@ -22,10 +22,29 @@ http://localhost:4173/
 
 ## Launch Later
 
-The launch phase should add `CNAME` with:
+The launch phase uses GitHub Pages with GitHub Actions. The repository contains `CNAME` with:
 
 ```text
 batip.app
 ```
 
-Then configure GitHub Pages and DNS.
+Because custom GitHub Actions workflows do not automatically configure the custom domain from `CNAME`, set the custom domain in GitHub:
+
+```text
+Repository Settings -> Pages -> Custom domain -> batip.app
+```
+
+Set Pages source to GitHub Actions.
+
+## DNS
+
+Configure the `batip.app` apex domain with GitHub Pages `A` records:
+
+```text
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+After DNS resolves, enable HTTPS in GitHub Pages.
