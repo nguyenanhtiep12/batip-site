@@ -68,6 +68,7 @@ Store URLs should use explicit locale paths, not the auto-detect root.
 Current Hi Morse store landing URLs:
 
 ```text
+/apps/hi-morse/
 /vi/apps/hi-morse/
 /ja/apps/hi-morse/
 /ko/apps/hi-morse/
@@ -83,6 +84,8 @@ Default/fallback:
 ```text
 /en/apps/hi-morse/
 ```
+
+The non-locale `/apps/hi-morse/` URL is an auto-detect entry point. It redirects to the best supported App Store landing locale and falls back to `/en/apps/hi-morse/`.
 
 ## Store Links
 

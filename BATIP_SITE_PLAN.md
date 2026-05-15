@@ -87,6 +87,7 @@ id       Indonesia / Indonesian
 Corresponding Hi Morse landing URLs:
 
 ```text
+https://batip.app/apps/hi-morse/
 https://batip.app/vi/apps/hi-morse/
 https://batip.app/ja/apps/hi-morse/
 https://batip.app/ko/apps/hi-morse/
@@ -102,6 +103,8 @@ Locales outside this App Store set should use the English fallback/default landi
 ```text
 https://batip.app/en/apps/hi-morse/
 ```
+
+The non-locale `https://batip.app/apps/hi-morse/` entry point should auto-detect a supported App Store landing locale, then fall back to English.
 
 ## Language Strategy
 

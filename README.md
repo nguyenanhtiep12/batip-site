@@ -80,6 +80,12 @@ These landing URLs are available under:
 /{locale}/apps/hi-morse/
 ```
 
+The non-locale marketing URL also exists and redirects users to the best supported landing locale:
+
+```text
+/apps/hi-morse/
+```
+
 The default/fallback marketing URL remains:
 
 ```text

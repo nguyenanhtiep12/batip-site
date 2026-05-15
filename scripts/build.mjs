@@ -27,6 +27,13 @@ writeFile(
     fallbackLocale: 'en',
   }),
 );
+writeFile(
+  'apps/hi-morse/index.html',
+  renderAppLanguageDetectPage({
+    appLandingLocales,
+    fallbackLocale: 'en',
+  }),
+);
 
 for (const locale of publishedLocales) {
   const content = readLocaleContent(locale);
@@ -481,8 +488,80 @@ ${publishedLocales.map((locale) => `    <link rel="alternate" hreflang="${escape
 `;
 }
 
+function renderAppLanguageDetectPage({ appLandingLocales, fallbackLocale }) {
+  const localeData = JSON.stringify(
+    appLandingLocales.map(({ tag }) => tag),
+    null,
+    2,
+  );
+  const aliases = JSON.stringify(
+    {
+      'en-au': 'en',
+      'en-gb': 'en',
+      'en-us': 'en',
+      'zh-cn': 'zh-Hans',
+      'zh-sg': 'zh-Hans',
+      'zh-hans': 'zh-Hans',
+      'zh-tw': 'zh-Hant',
+      'zh-hk': 'zh-Hant',
+      'zh-mo': 'zh-Hant',
+      'zh-hant': 'zh-Hant',
+    },
+    null,
+    2,
+  );
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hi Morse | BaTip</title>
+    <meta name="description" content="Hi Morse landing page with language detection.">
+    <meta name="theme-color" content="#07130f">
+    <link rel="canonical" href="${baseUrl}/apps/hi-morse/">
+${appLandingLocales.map((locale) => `    <link rel="alternate" hreflang="${escapeAttr(locale.tag)}" href="${baseUrl}/${locale.tag}/apps/hi-morse/">`).join('\n')}
+    <link rel="alternate" hreflang="x-default" href="${baseUrl}/en/apps/hi-morse/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script>
+      const appLandingLocales = ${localeData};
+      const localeAliases = ${aliases};
+      const fallbackLocale = '${fallbackLocale}';
+      const byLowercase = new Map(appLandingLocales.map((tag) => [tag.toLowerCase(), tag]));
+      const normalize = (tag) => String(tag || '').replace(/_/g, '-');
+      const bestMatch = (languages) => {
+        for (const language of languages) {
+          const normalized = normalize(language);
+          const lower = normalized.toLowerCase();
+          if (byLowercase.has(lower)) return byLowercase.get(lower);
+          if (localeAliases[lower]) return localeAliases[lower];
+          const base = lower.split('-')[0];
+          if (byLowercase.has(base)) return byLowercase.get(base);
+        }
+        return fallbackLocale;
+      };
+      const saved = localStorage.getItem('batip.locale');
+      const target = bestMatch(saved ? [saved] : navigator.languages || [navigator.language]);
+      location.replace('/' + target + '/apps/hi-morse/');
+    </script>
+  </head>
+  <body>
+    <main class="fallback-page">
+      <h1>Hi Morse</h1>
+      <p><a href="/en/apps/hi-morse/">Continue in English</a></p>
+      <p><a href="/vi/apps/hi-morse/">Tiếp tục bằng tiếng Việt</a></p>
+    </main>
+  </body>
+</html>
+`;
+}
+
 function renderSitemap() {
-  const urls = ['/', ...publishedLocales.flatMap((locale) => [
+  const urls = ['/', '/apps/hi-morse/', ...publishedLocales.flatMap((locale) => [
     `/${locale.tag}/`,
     `/${locale.tag}/apps/hi-morse/`,
     `/${locale.tag}/support/hi-morse/`,

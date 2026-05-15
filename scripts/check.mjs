@@ -12,6 +12,7 @@ const landingOnlyLocales = appLandingLocales.filter((locale) => !locale.publishe
 
 const requiredFiles = [
   'index.html',
+  'apps/hi-morse/index.html',
   ...publishedLocales.flatMap((locale) => [
     `${locale.tag}/index.html`,
     `${locale.tag}/apps/hi-morse/index.html`,
