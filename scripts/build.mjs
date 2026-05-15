@@ -276,6 +276,7 @@ function renderAppPage({ locale, content, app }) {
   const page = content.app;
   const fullSiteTag = locale.published ? locale.tag : (locale.fullSiteFallback ?? 'en');
   const features = page.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join('');
+  const googlePlayButton = renderGooglePlayButton({ app, page });
   const appStoreLabel = page.appStore ?? page.appStoreComing ?? 'App Store';
   const appStoreButton = app.appStoreUrl
     ? `<a class="button" href="${escapeAttr(app.appStoreUrl)}">${escapeHtml(appStoreLabel)}</a>`
@@ -296,7 +297,7 @@ function renderAppPage({ locale, content, app }) {
             <h1>${escapeHtml(page.headline)}</h1>
             <p class="lead">${escapeHtml(page.lead)}</p>
             <div class="actions">
-              <a class="button" href="${escapeAttr(app.googlePlayUrl)}">${escapeHtml(page.googlePlay)}</a>
+              ${googlePlayButton}
               ${appStoreButton}
             </div>
           </div>
@@ -315,7 +316,7 @@ function renderAppPage({ locale, content, app }) {
           <div>
             <h2>${escapeHtml(page.storeLinksHeading)}</h2>
             <div class="actions stacked">
-              <a class="button" href="${escapeAttr(app.googlePlayUrl)}">${escapeHtml(page.googlePlay)}</a>
+              ${googlePlayButton}
               ${appStoreButton}
               <a class="button secondary" href="/${fullSiteTag}/support/hi-morse/">${escapeHtml(page.supportLink)}</a>
               <a class="button secondary" href="/${fullSiteTag}/legal/hi-morse/privacy/">${escapeHtml(page.privacyLink)}</a>
@@ -329,6 +330,24 @@ function renderAppPage({ locale, content, app }) {
           <div class="screenshots">${screenshots}</div>
         </div>
       </section>`;
+}
+
+function renderGooglePlayButton({ app, page }) {
+  const status = app.googlePlayStatus ?? 'production';
+
+  if (status === 'closedTesting') {
+    if (app.googlePlayTesterUrl) {
+      return `<a class="button" href="${escapeAttr(app.googlePlayTesterUrl)}">${escapeHtml(page.googlePlayTesting ?? page.googlePlay)}</a>`;
+    }
+
+    return `<span class="button disabled" aria-disabled="true">${escapeHtml(page.googlePlayClosedTesting ?? page.googlePlayTesting ?? page.googlePlay)}</span>`;
+  }
+
+  if (app.googlePlayUrl) {
+    return `<a class="button" href="${escapeAttr(app.googlePlayUrl)}">${escapeHtml(page.googlePlay)}</a>`;
+  }
+
+  return `<span class="button disabled" aria-disabled="true">${escapeHtml(page.googlePlayUnavailable ?? page.googlePlay)}</span>`;
 }
 
 function renderSupportPage({ locale, content }) {

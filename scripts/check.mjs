@@ -6,6 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
 const locales = readJson('src/data/locales.json');
+const apps = readJson('src/data/apps.json');
 const publishedLocales = locales.filter((locale) => locale.published);
 const appLandingLocales = locales.filter((locale) => locale.published || locale.storeLanding);
 const landingOnlyLocales = appLandingLocales.filter((locale) => !locale.published);
@@ -113,10 +114,24 @@ for (const file of requiredFiles.filter((entry) => entry.endsWith('.html'))) {
   }
 }
 
-for (const file of listFiles(dist)) {
+const distFiles = listFiles(dist);
+
+for (const file of distFiles) {
   if (path.basename(file).startsWith('._')) {
     console.error(`Unexpected AppleDouble file in dist: ${path.relative(dist, file)}`);
     failures++;
+  }
+}
+
+for (const app of apps) {
+  if (app.googlePlayStatus === 'closedTesting' && app.googlePlayUrl && !app.googlePlayTesterUrl) {
+    for (const file of distFiles.filter((entry) => entry.endsWith('.html'))) {
+      const html = readFileSync(file, 'utf8');
+      if (html.includes(app.googlePlayUrl)) {
+        console.error(`${path.relative(dist, file)} exposes closed-testing Google Play URL`);
+        failures++;
+      }
+    }
   }
 }
 

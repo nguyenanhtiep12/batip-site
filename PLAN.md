@@ -100,9 +100,10 @@ The non-locale `/apps/hi-morse/` URL is an auto-detect entry point. It redirects
 Hi Morse store buttons currently point to:
 
 ```text
-Google Play: https://play.google.com/store/apps/details?id=app.batip.learnmorse
 App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
 ```
+
+Android is currently configured as `closedTesting` in `src/data/apps.json`. The Google Play details URL is kept in config for the production switch, but the public site does not expose it while no tester opt-in URL is configured. The rendered Android button is a localized disabled closed-testing state.
 
 ## Hi Morse Assets
 

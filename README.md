@@ -107,9 +107,10 @@ Home, Hi Morse marketing, support, legal hub, and privacy policy pages are local
 Hi Morse store buttons use:
 
 ```text
-Google Play: https://play.google.com/store/apps/details?id=app.batip.learnmorse
 App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
 ```
+
+Android is currently marked as closed testing in `src/data/apps.json`. Without a tester opt-in URL, the public site renders a disabled localized "Android closed testing" button instead of linking to the Google Play details URL.
 
 ## Legal Source
 

@@ -204,16 +204,23 @@ Purpose:
 - This is the app website or marketing URL for stores.
 - Explain what Hi Morse does.
 - Show the app icon and product visuals.
-- Link to Google Play.
+- Show Android availability clearly.
 - Link to App Store.
 - Link to support and privacy pages.
 
 Current store links:
 
 ```text
-Google Play: https://play.google.com/store/apps/details?id=app.batip.learnmorse
 App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
 ```
+
+Android status:
+
+```text
+Google Play: closed testing
+```
+
+The Google Play details URL is kept in app config for the production switch, but the public site should not expose that URL while no tester opt-in URL is configured. If a Play Console opt-in link is added later, the landing page can render a localized "Join Android test" action.
 
 Core app description:
 
