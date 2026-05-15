@@ -4,7 +4,9 @@ Static source for the future `batip.app` website.
 
 ## Status
 
-This repository is being built separately from the existing `batip-support` site. Do not point production traffic here until the site has been reviewed.
+This repository now serves the production `batip.app` website through GitHub Pages.
+
+The existing `batip-support` repository and the legacy `support.batip.app` / `legal.batip.app` DNS records are intentionally left untouched until the store URLs are migrated and reviewed.
 
 ## Commands
 
@@ -20,25 +22,25 @@ The local server serves the generated `dist/` folder at:
 http://localhost:4173/
 ```
 
-## Launch Later
+## Launch
 
-The launch phase uses GitHub Pages with GitHub Actions. The repository contains `CNAME` with:
+GitHub Pages is configured with GitHub Actions. The repository contains `CNAME` with:
 
 ```text
 batip.app
 ```
 
-Because custom GitHub Actions workflows do not automatically configure the custom domain from `CNAME`, set the custom domain in GitHub:
+The custom domain is also set in GitHub:
 
 ```text
 Repository Settings -> Pages -> Custom domain -> batip.app
 ```
 
-Set Pages source to GitHub Actions.
+Pages source is set to GitHub Actions and HTTPS is enforced.
 
 ## DNS
 
-Configure the `batip.app` apex domain with GitHub Pages `A` records:
+The `batip.app` apex domain uses GitHub Pages `A` records:
 
 ```text
 185.199.108.153
@@ -47,4 +49,15 @@ Configure the `batip.app` apex domain with GitHub Pages `A` records:
 185.199.111.153
 ```
 
-After DNS resolves, enable HTTPS in GitHub Pages.
+The `www` host uses:
+
+```text
+CNAME www -> nguyenanhtiep12.github.io.
+```
+
+Current launch status as of 2026-05-15:
+
+- `https://batip.app/` is live and returns `HTTP/2 200`.
+- `https://batip.app/` redirects users to the detected locale, with English as fallback.
+- GitHub Pages shows the custom domain DNS check in progress after the `www` record was added.
+- `https://www.batip.app/` resolves to GitHub Pages, but the `www` certificate is still pending refresh.

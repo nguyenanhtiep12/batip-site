@@ -13,7 +13,7 @@
 | 1 | Foundation: static generator, locale registry, EN/VI skeleton routes, language detection, copied Hi Morse assets | Completed | `093815f` |
 | 2 | Content: EN/VI home, Hi Morse marketing, support, legal hub, privacy policy | Completed | `1bd9bf8` |
 | 3 | Design and QA: visual polish, responsive checks, metadata, hreflang, accessibility pass | Completed | This commit |
-| 4 | Launch: CNAME, GitHub Pages, DNS, HTTPS, store URL updates | In progress | This commit |
+| 4 | Launch: CNAME, GitHub Pages, DNS, HTTPS, store URL updates | Partially completed | `677bf0b` |
 
 ## Locale Registry
 
@@ -85,9 +85,9 @@ Deployable HTML must reference copied assets under:
 - Added root `CNAME` with `batip.app`.
 - Added GitHub Actions workflow at `.github/workflows/pages.yml`.
 - The workflow builds `dist/`, runs checks, uploads the Pages artifact, and deploys with `actions/deploy-pages`.
-- GitHub Pages source should be set to GitHub Actions in the repository UI.
-- Custom domain still needs to be set in GitHub Pages Settings because GitHub ignores `CNAME` for custom Actions publishing workflows.
-- DNS for `batip.app` should point the apex domain to GitHub Pages:
+- GitHub Pages source is set to GitHub Actions in the repository UI.
+- Custom domain is set to `batip.app` in GitHub Pages Settings.
+- DNS for `batip.app` points the apex domain to GitHub Pages:
 
 ```text
 185.199.108.153
@@ -96,4 +96,16 @@ Deployable HTML must reference copied assets under:
 185.199.111.153
 ```
 
-- Enable HTTPS in GitHub Pages after DNS is verified.
+- `www.batip.app` is configured as `CNAME -> nguyenanhtiep12.github.io.`.
+- `https://batip.app/` is live and returns `HTTP/2 200`.
+- `Enforce HTTPS` is enabled for the primary domain.
+- GitHub Pages currently reports DNS check in progress after adding the `www` record.
+- `https://www.batip.app/` resolves to GitHub Pages, but the certificate is still pending refresh for the `www` hostname.
+
+## Remaining Launch Follow-up
+
+- Wait for GitHub Pages to finish DNS and certificate refresh for `www.batip.app`.
+- Re-check `https://www.batip.app/` before treating `www` as ready.
+- Review the production content at `https://batip.app/`.
+- After content review, update Google Play and App Store URLs to the new explicit locale paths.
+- Keep the old support and legal subdomains online until store URL changes are approved and stable.
