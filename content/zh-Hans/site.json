@@ -12,6 +12,15 @@
     "footer": "BaTip 打造专注于学习、练习和日常小工具的应用。",
     "contactEmail": "nguyenanhtiep12@gmail.com"
   },
+  "home": {
+    "title": "BaTip",
+    "description": "BaTip 应用、支持和法律文档。",
+    "eyebrow": "BaTip",
+    "headline": "为小而实用的技能打造的专注应用。",
+    "lead": "BaTip 创建紧贴任务的小工具：学习一件事、练习它，并让你的数据保持清晰可理解。",
+    "appsHeading": "应用",
+    "appSummary": "Hi Morse 帮助你学习、翻译、聆听、闪光显示并练习摩斯电码。"
+  },
   "app": {
     "title": "Hi Morse",
     "description": "Hi Morse 是一款专注、友好的摩斯电码学习和练习应用。",
@@ -33,6 +42,68 @@
     "appStoreComing": "App Store 链接稍后添加",
     "supportLink": "支持（英文）",
     "privacyLink": "隐私政策（英文）"
+  },
+  "support": {
+    "title": "Hi Morse 支持",
+    "description": "Hi Morse 的支持、故障排查和联系方式。",
+    "eyebrow": "支持",
+    "headline": "Hi Morse 支持。",
+    "lead": "这里列出常见检查项。如果问题仍然存在，请在邮件中附上设备型号和应用版本。",
+    "sections": [
+      {
+        "heading": "联系",
+        "body": [
+          "如需反馈、报告错误或咨询支持，请通过电子邮件联系开发者：nguyenanhtiep12@gmail.com。",
+          "报告问题时，请包含设备型号、操作系统版本、应用版本、当前选择的语言，以及你当时想执行的操作。"
+        ]
+      },
+      {
+        "heading": "联系支持前",
+        "body": [
+          [
+            "更新到 Google Play 或 App Store 上提供的最新版本。",
+            "如果声音、闪光或播放看起来卡住，请重启应用。",
+            "如果音频播放声音过小，请检查设备音量。",
+            "如果闪光反馈不可用，请检查闪光灯权限和设备支持情况。",
+            "测试音频或闪光播放时，请先尝试一个简短的摩斯样本。"
+          ]
+        ]
+      },
+      {
+        "heading": "常见问题",
+        "body": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "question": "Hi Morse 需要账号吗？",
+                "answer": "不需要。你无需创建账号即可使用 Hi Morse。"
+              },
+              {
+                "question": "Hi Morse 会上传我输入的摩斯文字吗？",
+                "answer": "不会。摩斯文字和练习输入会在你的设备上处理。"
+              },
+              {
+                "question": "为什么应用会使用闪光灯？",
+                "answer": "只有当你选择摩斯电码的闪光反馈或闪光播放时，应用才会使用闪光灯。"
+              },
+              {
+                "question": "为什么反馈邮件会包含设备信息？",
+                "answer": "设备和应用信息有助于诊断问题。你可以在发送邮件前编辑或删除这些信息。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "legal": {
+    "title": "法律信息",
+    "description": "BaTip 应用的法律文档。",
+    "eyebrow": "法律信息",
+    "headline": "法律文档。",
+    "lead": "查看 BaTip 应用的隐私和法律文档。",
+    "privacyLabel": "Hi Morse 隐私政策"
   },
   "alts": {
     "translate": "Hi Morse 翻译界面",

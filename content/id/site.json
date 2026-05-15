@@ -12,6 +12,15 @@
     "footer": "BaTip membuat aplikasi yang fokus untuk belajar, berlatih, dan membantu tugas kecil sehari-hari.",
     "contactEmail": "nguyenanhtiep12@gmail.com"
   },
+  "home": {
+    "title": "BaTip",
+    "description": "Aplikasi, dukungan, dan dokumen legal BaTip.",
+    "eyebrow": "BaTip",
+    "headline": "Aplikasi yang fokus untuk keterampilan kecil yang berguna.",
+    "lead": "BaTip membuat alat ringkas yang dekat dengan tugasnya: belajar sesuatu, berlatih, dan menjaga datamu tetap mudah dipahami.",
+    "appsHeading": "Aplikasi",
+    "appSummary": "Hi Morse membantu kamu belajar, menerjemahkan, mendengar, menyalakan flash, dan berlatih kode Morse."
+  },
   "app": {
     "title": "Hi Morse",
     "description": "Hi Morse membantu kamu belajar dan berlatih kode Morse dalam aplikasi yang fokus dan mudah digunakan.",
@@ -33,6 +42,68 @@
     "appStoreComing": "Tautan App Store akan ditambahkan nanti",
     "supportLink": "Dukungan (Inggris)",
     "privacyLink": "Kebijakan Privasi (Inggris)"
+  },
+  "support": {
+    "title": "Dukungan Hi Morse",
+    "description": "Dukungan, pemecahan masalah, dan kontak untuk Hi Morse.",
+    "eyebrow": "Dukungan",
+    "headline": "Dukungan untuk Hi Morse.",
+    "lead": "Gunakan catatan ini untuk memeriksa masalah umum. Jika masih ada yang terasa tidak beres, kirim email dukungan dengan model perangkat dan versi aplikasi.",
+    "sections": [
+      {
+        "heading": "Kontak",
+        "body": [
+          "Untuk masukan, laporan bug, atau pertanyaan dukungan, hubungi pengembang lewat email di nguyenanhtiep12@gmail.com.",
+          "Saat melaporkan masalah, sertakan model perangkat, versi sistem operasi, versi aplikasi, bahasa yang dipilih, dan apa yang sedang kamu coba lakukan."
+        ]
+      },
+      {
+        "heading": "Sebelum menghubungi dukungan",
+        "body": [
+          [
+            "Perbarui ke versi terbaru yang tersedia di Google Play atau App Store.",
+            "Mulai ulang aplikasi jika suara, flash, atau pemutaran terasa macet.",
+            "Periksa volume perangkat jika pemutaran audio terdengar pelan.",
+            "Periksa izin lampu flash dan dukungan perangkat jika umpan balik flash tidak tersedia.",
+            "Coba sampel Morse pendek terlebih dahulu saat menguji audio atau pemutaran flash."
+          ]
+        ]
+      },
+      {
+        "heading": "FAQ",
+        "body": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "question": "Apakah Hi Morse memerlukan akun?",
+                "answer": "Tidak. Kamu dapat menggunakan Hi Morse tanpa membuat akun."
+              },
+              {
+                "question": "Apakah Hi Morse mengunggah teks Morse yang saya ketik?",
+                "answer": "Tidak. Teks Morse dan input latihan diproses di perangkatmu."
+              },
+              {
+                "question": "Mengapa aplikasi menggunakan lampu flash?",
+                "answer": "Lampu flash hanya digunakan saat kamu memilih umpan balik flash atau pemutaran flash untuk kode Morse."
+              },
+              {
+                "question": "Mengapa email masukan menyertakan detail perangkat?",
+                "answer": "Detail perangkat dan aplikasi membantu mendiagnosis masalah. Kamu dapat mengedit atau menghapus informasi tersebut sebelum mengirim email."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "description": "Dokumen legal untuk aplikasi BaTip.",
+    "eyebrow": "Legal",
+    "headline": "Dokumen legal.",
+    "lead": "Tinjau dokumen privasi dan legal untuk aplikasi BaTip.",
+    "privacyLabel": "Kebijakan Privasi Hi Morse"
   },
   "alts": {
     "translate": "Layar terjemahan Hi Morse",

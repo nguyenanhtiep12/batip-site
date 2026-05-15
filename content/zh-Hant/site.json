@@ -12,6 +12,15 @@
     "footer": "BaTip 打造專注於學習、練習與日常小工具的 App。",
     "contactEmail": "nguyenanhtiep12@gmail.com"
   },
+  "home": {
+    "title": "BaTip",
+    "description": "BaTip App、支援與法律文件。",
+    "eyebrow": "BaTip",
+    "headline": "為小而實用的技能打造的專注 App。",
+    "lead": "BaTip 建立緊貼任務的小工具：學習一件事、練習它，並讓你的資料保持清楚易懂。",
+    "appsHeading": "應用程式",
+    "appSummary": "Hi Morse 協助你學習、翻譯、聆聽、閃光顯示並練習摩斯電碼。"
+  },
   "app": {
     "title": "Hi Morse",
     "description": "Hi Morse 是一款專注、友善的摩斯電碼學習與練習 App。",
@@ -33,6 +42,68 @@
     "appStoreComing": "App Store 連結稍後新增",
     "supportLink": "支援（英文）",
     "privacyLink": "隱私權政策（英文）"
+  },
+  "support": {
+    "title": "Hi Morse 支援",
+    "description": "Hi Morse 的支援、疑難排解與聯絡資訊。",
+    "eyebrow": "支援",
+    "headline": "Hi Morse 支援。",
+    "lead": "這裡列出常見檢查項目。如果問題仍然存在，請在郵件中附上裝置型號與 App 版本。",
+    "sections": [
+      {
+        "heading": "聯絡",
+        "body": [
+          "如需提供意見、回報錯誤或詢問支援，請透過電子郵件聯絡開發者：nguyenanhtiep12@gmail.com。",
+          "回報問題時，請包含裝置型號、作業系統版本、App 版本、目前選擇的語言，以及你當時想執行的操作。"
+        ]
+      },
+      {
+        "heading": "聯絡支援前",
+        "body": [
+          [
+            "更新到 Google Play 或 App Store 上提供的最新版本。",
+            "如果聲音、閃光或播放看起來卡住，請重新啟動 App。",
+            "如果音訊播放聲音過小，請檢查裝置音量。",
+            "如果閃光回饋無法使用，請檢查閃光燈權限與裝置支援情況。",
+            "測試音訊或閃光播放時，請先嘗試簡短的摩斯樣本。"
+          ]
+        ]
+      },
+      {
+        "heading": "常見問題",
+        "body": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "question": "Hi Morse 需要帳號嗎？",
+                "answer": "不需要。你不必建立帳號即可使用 Hi Morse。"
+              },
+              {
+                "question": "Hi Morse 會上傳我輸入的摩斯文字嗎？",
+                "answer": "不會。摩斯文字與練習輸入會在你的裝置上處理。"
+              },
+              {
+                "question": "為什麼 App 會使用手電筒？",
+                "answer": "只有當你選擇摩斯電碼的閃光回饋或閃光播放時，App 才會使用手電筒。"
+              },
+              {
+                "question": "為什麼意見回饋郵件會包含裝置資訊？",
+                "answer": "裝置與 App 資訊有助於診斷問題。你可以在寄出郵件前編輯或刪除這些資訊。"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "legal": {
+    "title": "法律資訊",
+    "description": "BaTip App 的法律文件。",
+    "eyebrow": "法律資訊",
+    "headline": "法律文件。",
+    "lead": "查看 BaTip App 的隱私與法律文件。",
+    "privacyLabel": "Hi Morse 隱私權政策"
   },
   "alts": {
     "translate": "Hi Morse 翻譯畫面",

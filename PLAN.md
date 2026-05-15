@@ -51,7 +51,7 @@ pt-BR
 id
 ```
 
-Landing-only locales now use localized Hi Morse marketing copy based on the reviewed App Store metadata. Support and legal links from those landing pages still point back to English until reviewed support/legal translations are available. Outside those App Store locales, store marketing should fall back to `/en/apps/hi-morse/` / en-US metadata.
+Landing-only locales now use localized Hi Morse marketing copy based on the reviewed App Store metadata. Localized Home, Support, and Legal hub copy is prepared in content files; those routes will be published after localized privacy policy content is added and checked. Outside those App Store locales, store marketing should fall back to `/en/apps/hi-morse/` / en-US metadata.
 
 ## Stable URLs
 
@@ -115,7 +115,7 @@ Deployable HTML must reference copied assets under:
 - EN/VI home, marketing, support, legal hub, and privacy content are now present.
 - Privacy content follows `/Volumes/Transcend/Applications/batip-legal/hi-morse/index.md`, including local data, clipboard use, flashlight behavior, Firebase Crashlytics, feedback email, third-party services, retention, security, translations, and contact.
 - English remains the controlling source version for translated legal content unless a translation is explicitly reviewed otherwise.
-- Hi Morse landing-only locales use localized marketing content; legal/support content remains English fallback until those translations are reviewed.
+- Hi Morse landing-only locales use localized marketing content. Localized Home, Support, and Legal hub copy is prepared for the App Store locale set; privacy policy translations are the remaining content gate before publishing full routes.
 
 ## Phase 3 QA Notes
 

@@ -12,6 +12,15 @@
     "footer": "A BaTip cria apps focados para aprender, praticar e resolver pequenas tarefas do dia a dia.",
     "contactEmail": "nguyenanhtiep12@gmail.com"
   },
+  "home": {
+    "title": "BaTip",
+    "description": "Apps, suporte e documentos legais da BaTip.",
+    "eyebrow": "BaTip",
+    "headline": "Apps focados para pequenas habilidades úteis.",
+    "lead": "A BaTip cria ferramentas compactas que ficam perto da tarefa: aprender algo, praticar e manter seus dados compreensíveis.",
+    "appsHeading": "Apps",
+    "appSummary": "Hi Morse ajuda você a aprender, traduzir, ouvir, piscar com flash e praticar código Morse."
+  },
   "app": {
     "title": "Hi Morse",
     "description": "Hi Morse ajuda você a aprender e praticar código Morse em um app focado e amigável.",
@@ -33,6 +42,68 @@
     "appStoreComing": "O link da App Store será adicionado depois",
     "supportLink": "Suporte (inglês)",
     "privacyLink": "Política de Privacidade (inglês)"
+  },
+  "support": {
+    "title": "Suporte do Hi Morse",
+    "description": "Suporte, solução de problemas e contato para Hi Morse.",
+    "eyebrow": "Suporte",
+    "headline": "Suporte para Hi Morse.",
+    "lead": "Use estas notas para verificar problemas comuns. Se algo ainda parecer errado, envie um e-mail ao suporte com o modelo do dispositivo e a versão do app.",
+    "sections": [
+      {
+        "heading": "Contato",
+        "body": [
+          "Para feedback, relatórios de erro ou perguntas de suporte, entre em contato com o desenvolvedor pelo e-mail nguyenanhtiep12@gmail.com.",
+          "Ao relatar um problema, inclua o modelo do dispositivo, versão do sistema operacional, versão do app, idioma selecionado e o que você estava tentando fazer."
+        ]
+      },
+      {
+        "heading": "Antes de entrar em contato",
+        "body": [
+          [
+            "Atualize para a versão mais recente disponível no Google Play ou na App Store.",
+            "Reinicie o app se som, flash ou reprodução parecerem travados.",
+            "Verifique o volume do dispositivo se a reprodução de áudio estiver baixa.",
+            "Verifique a permissão da lanterna e o suporte do dispositivo se a resposta com flash não estiver disponível.",
+            "Teste primeiro uma amostra curta de Morse ao verificar áudio ou reprodução com flash."
+          ]
+        ]
+      },
+      {
+        "heading": "Perguntas frequentes",
+        "body": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "question": "O Hi Morse precisa de uma conta?",
+                "answer": "Não. Você pode usar o Hi Morse sem criar uma conta."
+              },
+              {
+                "question": "O Hi Morse envia o texto Morse que eu digito?",
+                "answer": "Não. O texto Morse e a entrada de prática são processados no seu dispositivo."
+              },
+              {
+                "question": "Por que o app usa a lanterna?",
+                "answer": "A lanterna é usada somente quando você escolhe resposta com flash ou reprodução com flash para código Morse."
+              },
+              {
+                "question": "Por que o e-mail de feedback inclui detalhes do dispositivo?",
+                "answer": "Detalhes do dispositivo e do app ajudam a diagnosticar problemas. Você pode editar ou remover essas informações antes de enviar o e-mail."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "legal": {
+    "title": "Legal",
+    "description": "Documentos legais dos apps da BaTip.",
+    "eyebrow": "Legal",
+    "headline": "Documentos legais.",
+    "lead": "Veja documentos de privacidade e legais dos apps da BaTip.",
+    "privacyLabel": "Política de Privacidade do Hi Morse"
   },
   "alts": {
     "translate": "Tela de tradução do Hi Morse",

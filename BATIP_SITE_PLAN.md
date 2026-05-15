@@ -153,7 +153,8 @@ Rules:
 - Vietnamese is published from the start.
 - The current App Store metadata/screenshot locales are supported with stable landing URLs.
 - Landing-only locales use localized Hi Morse marketing copy based on the reviewed App Store metadata.
-- Support and legal links from landing-only locales point to English until reviewed translations are available.
+- Localized Home, Support, and Legal hub copy is prepared for the current App Store locale set.
+- Support and legal links from landing-only locales should point to localized routes only after localized privacy policy content is added and checked.
 - Other locales are registered for future expansion but should not be presented as reviewed legal translations until content is ready.
 - If a browser locale is not published, fall back to `/en/`.
 - If the user manually selects a language, save that choice in `localStorage`.
@@ -268,7 +269,7 @@ Content basis:
 - Include the date fields present in the source policy. The current source includes `Last updated`.
 - Include translation status if needed.
 - For translated legal pages, English should remain the source version unless a translated version is explicitly reviewed.
-- Hi Morse landing pages can be localized independently from legal/support pages; do not publish legal/support translations until they are reviewed.
+- Hi Morse landing pages can be localized independently from legal/support pages. Publish localized support/legal routes only after the translated privacy policy is present and the English controlling-version note remains in each translation.
 
 ## Visual Assets For Hi Morse
 
