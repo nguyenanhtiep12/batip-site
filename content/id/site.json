@@ -105,6 +105,138 @@
     "lead": "Tinjau dokumen privasi dan legal untuk aplikasi BaTip.",
     "privacyLabel": "Kebijakan Privasi Hi Morse"
   },
+  "privacy": {
+    "title": "Kebijakan Privasi",
+    "description": "Kebijakan Privasi untuk Hi Morse.",
+    "eyebrow": "Kebijakan Privasi",
+    "headline": "Kebijakan Privasi",
+    "lead": "Hi Morse adalah aplikasi belajar dan menerjemahkan kode Morse yang dikembangkan oleh BaTip. Kebijakan Privasi ini menjelaskan informasi apa yang ditangani aplikasi dan bagaimana informasi tersebut digunakan.",
+    "lastUpdatedLabel": "Terakhir diperbarui",
+    "lastUpdated": "13 Mei 2026",
+    "sections": [
+      {
+        "heading": "Ringkasan",
+        "body": [
+          "Hi Morse tidak memerlukan akun. Teks Morse, input latihan, pengaturan keyboard, progres, pola terbaru, dan preferensi aplikasi disimpan secara lokal di perangkatmu.",
+          "Versi Hi Morse saat ini tidak menyertakan SDK iklan, pembelian dalam aplikasi, langganan, atau pelacakan pengguna untuk iklan."
+        ]
+      },
+      {
+        "heading": "Informasi yang tidak kami kumpulkan",
+        "body": [
+          "Hi Morse tidak mengumpulkan nama, alamat email, nomor telepon, kontak, lokasi presisi, foto, rekaman audio, gambar kamera, atau informasi pembayaran.",
+          "Aplikasi tidak mengunggah teks Morse yang kamu ketik, terjemahkan, salin, tempel, atau latih. Tindakan tersebut diproses di perangkatmu."
+        ]
+      },
+      {
+        "heading": "Informasi yang disimpan di perangkatmu",
+        "body": [
+          "Hi Morse dapat menyimpan informasi berikut secara lokal di perangkatmu:",
+          [
+            "Bahasa aplikasi dan preferensi navigasi",
+            "Preferensi audio dan keyboard Morse",
+            "Pola Morse terbaru",
+            "Progres latihan, streak, dan riwayat jawaban"
+          ],
+          "Data lokal ini hanya digunakan untuk menyediakan fitur aplikasi. Data ini tidak dikirim ke server BaTip."
+        ]
+      },
+      {
+        "heading": "Clipboard",
+        "body": [
+          "Hi Morse mengakses clipboard hanya saat kamu menggunakan tindakan aplikasi seperti Salin atau Tempel. Konten clipboard digunakan untuk tindakan yang kamu minta dan tidak diunggah oleh aplikasi."
+        ]
+      },
+      {
+        "heading": "Lampu flash ponsel",
+        "body": [
+          "Hi Morse dapat menggunakan lampu flash perangkatmu untuk mengedipkan kode Morse saat kamu memilih umpan balik flash atau pemutaran flash. Aplikasi hanya menyalakan dan mematikan lampu flash. Aplikasi tidak mengambil foto, video, atau gambar kamera."
+        ]
+      },
+      {
+        "heading": "Pelaporan crash",
+        "body": [
+          "Hi Morse menggunakan Firebase Crashlytics untuk membantu mengidentifikasi dan memperbaiki crash serta masalah stabilitas. Crashlytics dapat mengumpulkan informasi diagnostik seperti log crash, stack trace, versi aplikasi, versi sistem operasi, model perangkat, status perangkat, dan pengenal yang digunakan untuk pelaporan crash.",
+          "Informasi ini hanya digunakan untuk mendiagnosis dan meningkatkan stabilitas aplikasi. Hi Morse tidak menggunakan data Crashlytics untuk iklan.",
+          "Firebase Crashlytics disediakan oleh Google. Kamu dapat mempelajari lebih lanjut tentang privasi dan penanganan data Firebase di sini:",
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Privasi dan Keamanan Firebase",
+                "href": "https://firebase.google.com/support/privacy"
+              },
+              {
+                "label": "Panduan pengungkapan data Firebase",
+                "href": "https://firebase.google.com/docs/android/play-data-disclosure"
+              },
+              {
+                "label": "Kebijakan Privasi Google",
+                "href": "https://policies.google.com/privacy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Email masukan",
+        "body": [
+          "Jika kamu memilih mengirim masukan, melaporkan bug, atau menghubungi pengembang, aplikasi emailmu dapat membuat pesan yang ditujukan ke alamat email dukungan. Pesan tersebut dapat menyertakan versi aplikasi, sistem operasi, bahasa yang dipilih, layar saat ini, dan stempel waktu untuk membantu mendiagnosis masalah. Kamu dapat mengedit atau menghapus informasi ini sebelum mengirim email.",
+          "Email yang kamu kirim hanya digunakan untuk menanggapi permintaanmu dan meningkatkan aplikasi."
+        ]
+      },
+      {
+        "heading": "Layanan pihak ketiga",
+        "body": [
+          "Hi Morse dapat menggunakan layanan pihak ketiga berikut:",
+          [
+            "Firebase Crashlytics untuk pelaporan crash dan diagnostik",
+            "Layanan Google Play atau Apple App Store untuk rating aplikasi dan tindakan listing toko",
+            "Aplikasi email atau browser yang kamu pilih saat menghubungi dukungan"
+          ],
+          "Layanan pihak ketiga ini memproses informasi berdasarkan kebijakan privasi masing-masing."
+        ]
+      },
+      {
+        "heading": "Anak-anak",
+        "body": [
+          "Hi Morse adalah utilitas edukasi untuk khalayak umum dan tidak ditujukan secara khusus untuk anak di bawah 13 tahun. Aplikasi tidak secara sengaja mengumpulkan informasi pribadi dari anak-anak. Jika kamu yakin seorang anak memberikan informasi pribadi melalui email masukan, hubungi kami agar kami dapat menghapusnya."
+        ]
+      },
+      {
+        "heading": "Retensi data",
+        "body": [
+          "Data aplikasi lokal tetap berada di perangkatmu sampai kamu menghapusnya di aplikasi, menghapus data aplikasi, atau mencopot pemasangan aplikasi.",
+          "Laporan crash disimpan oleh Firebase Crashlytics sesuai praktik retensi Firebase. Email masukan disimpan hanya selama diperlukan untuk menanggapi permintaan dukungan dan meningkatkan aplikasi."
+        ]
+      },
+      {
+        "heading": "Keamanan",
+        "body": [
+          "Hi Morse menggunakan langkah keamanan standar dari platform dan penyedia layanan. Data diagnostik yang dikirim ke Firebase ditransmisikan menggunakan koneksi aman. Namun, tidak ada metode transmisi atau penyimpanan yang sepenuhnya aman."
+        ]
+      },
+      {
+        "heading": "Terjemahan",
+        "body": [
+          "Jika Kebijakan Privasi ini diterjemahkan ke bahasa lain, versi bahasa Inggris berlaku jika ada ketidaksesuaian."
+        ]
+      },
+      {
+        "heading": "Perubahan pada kebijakan ini",
+        "body": [
+          "Kebijakan Privasi ini dapat diperbarui saat aplikasi berubah. Misalnya, jika Hi Morse menambahkan iklan atau pembelian dalam aplikasi di versi mendatang, kebijakan ini dan deklarasi keamanan data toko akan diperbarui sebelum rilis."
+        ]
+      },
+      {
+        "heading": "Kontak",
+        "body": [
+          "Jika kamu memiliki pertanyaan tentang Kebijakan Privasi ini, hubungi:",
+          "nguyenanhtiep12@gmail.com"
+        ]
+      }
+    ]
+  },
   "alts": {
     "translate": "Layar terjemahan Hi Morse",
     "codeTable": "Layar tabel kode Hi Morse",

@@ -105,6 +105,138 @@
     "lead": "Consulta los documentos de privacidad y legales de las apps de BaTip.",
     "privacyLabel": "Política de privacidad de Hi Morse"
   },
+  "privacy": {
+    "title": "Política de privacidad",
+    "description": "Política de privacidad de Hi Morse.",
+    "eyebrow": "Política de privacidad",
+    "headline": "Política de privacidad",
+    "lead": "Hi Morse es una app de aprendizaje y traducción de código Morse desarrollada por BaTip. Esta Política de privacidad explica qué información maneja la app y cómo se usa.",
+    "lastUpdatedLabel": "Última actualización",
+    "lastUpdated": "13 de mayo de 2026",
+    "sections": [
+      {
+        "heading": "Resumen",
+        "body": [
+          "Hi Morse no requiere una cuenta. El texto Morse, la entrada de práctica, la configuración del teclado, el progreso, los patrones recientes y las preferencias de la app se guardan localmente en tu dispositivo.",
+          "La versión actual de Hi Morse no incluye SDK de publicidad, compras dentro de la app, suscripciones ni seguimiento de usuarios con fines publicitarios."
+        ]
+      },
+      {
+        "heading": "Información que no recopilamos",
+        "body": [
+          "Hi Morse no recopila nombres, direcciones de correo electrónico, números telefónicos, contactos, ubicación precisa, fotos, grabaciones de audio, imágenes de cámara ni información de pago.",
+          "La app no sube el texto Morse que escribes, traduces, copias, pegas o practicas. Esas acciones se procesan en tu dispositivo."
+        ]
+      },
+      {
+        "heading": "Información almacenada en tu dispositivo",
+        "body": [
+          "Hi Morse puede guardar la siguiente información localmente en tu dispositivo:",
+          [
+            "Idioma de la app y preferencias de navegación",
+            "Preferencias de audio y teclado Morse",
+            "Patrones Morse recientes",
+            "Progreso de práctica, rachas e historial de respuestas"
+          ],
+          "Estos datos locales se usan solo para proporcionar funciones de la app. No se envían a servidores de BaTip."
+        ]
+      },
+      {
+        "heading": "Portapapeles",
+        "body": [
+          "Hi Morse accede al portapapeles solo cuando usas acciones de la app como Copiar o Pegar. El contenido del portapapeles se usa para la acción que solicitaste y la app no lo sube."
+        ]
+      },
+      {
+        "heading": "Linterna del teléfono",
+        "body": [
+          "Hi Morse puede usar la linterna de tu dispositivo para parpadear código Morse cuando eliges respuesta con flash o reproducción con flash. La app solo enciende y apaga la linterna. No captura fotos, videos ni imágenes de cámara."
+        ]
+      },
+      {
+        "heading": "Reportes de fallos",
+        "body": [
+          "Hi Morse usa Firebase Crashlytics para ayudar a identificar y corregir fallos y problemas de estabilidad. Crashlytics puede recopilar información de diagnóstico como registros de fallos, trazas de pila, versión de la app, versión del sistema operativo, modelo del dispositivo, estado del dispositivo e identificadores usados para reportes de fallos.",
+          "Esta información se usa solo para diagnosticar y mejorar la estabilidad de la app. Hi Morse no usa datos de Crashlytics para publicidad.",
+          "Firebase Crashlytics es proporcionado por Google. Puedes obtener más información sobre la privacidad y el manejo de datos de Firebase aquí:",
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Privacidad y seguridad de Firebase",
+                "href": "https://firebase.google.com/support/privacy"
+              },
+              {
+                "label": "Guía de divulgación de datos de Firebase",
+                "href": "https://firebase.google.com/docs/android/play-data-disclosure"
+              },
+              {
+                "label": "Política de privacidad de Google",
+                "href": "https://policies.google.com/privacy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Correo de comentarios",
+        "body": [
+          "Si eliges enviar comentarios, reportar un error o contactar al desarrollador, tu app de correo puede crear un mensaje dirigido al correo de soporte. El mensaje puede incluir la versión de la app, sistema operativo, idioma seleccionado, pantalla actual y marca de tiempo para ayudar a diagnosticar el problema. Puedes editar o quitar esta información antes de enviar el correo.",
+          "Los correos que envías se usan solo para responder a tu solicitud y mejorar la app."
+        ]
+      },
+      {
+        "heading": "Servicios de terceros",
+        "body": [
+          "Hi Morse puede usar los siguientes servicios de terceros:",
+          [
+            "Firebase Crashlytics para reportes de fallos y diagnóstico",
+            "Servicios de Google Play o Apple App Store para calificaciones de la app y acciones de la ficha de tienda",
+            "Tu app de correo o navegador seleccionado cuando eliges contactar a soporte"
+          ],
+          "Estos servicios de terceros procesan información bajo sus propias políticas de privacidad."
+        ]
+      },
+      {
+        "heading": "Menores",
+        "body": [
+          "Hi Morse es una utilidad educativa para público general y no está dirigida específicamente a menores de 13 años. La app no recopila deliberadamente información personal de menores. Si crees que un menor proporcionó información personal mediante un correo de comentarios, contáctanos para que podamos eliminarla."
+        ]
+      },
+      {
+        "heading": "Retención de datos",
+        "body": [
+          "Los datos locales de la app permanecen en tu dispositivo hasta que los elimines en la app, borres los datos de la app o desinstales la app.",
+          "Los reportes de fallos se conservan conforme a las prácticas de retención de Firebase Crashlytics. Los correos de comentarios se conservan solo durante el tiempo necesario para responder solicitudes de soporte y mejorar la app."
+        ]
+      },
+      {
+        "heading": "Seguridad",
+        "body": [
+          "Hi Morse usa medidas de seguridad estándar de la plataforma y de proveedores de servicios. Los datos de diagnóstico enviados a Firebase se transmiten mediante conexiones seguras. Sin embargo, ningún método de transmisión o almacenamiento es completamente seguro."
+        ]
+      },
+      {
+        "heading": "Traducciones",
+        "body": [
+          "Si esta Política de privacidad se traduce a otros idiomas, la versión en inglés prevalece en caso de cualquier inconsistencia."
+        ]
+      },
+      {
+        "heading": "Cambios a esta política",
+        "body": [
+          "Esta Política de privacidad puede actualizarse cuando cambie la app. Por ejemplo, si Hi Morse agrega publicidad o compras dentro de la app en una versión futura, esta política y las declaraciones de seguridad de datos de la tienda se actualizarán antes del lanzamiento."
+        ]
+      },
+      {
+        "heading": "Contacto",
+        "body": [
+          "Si tienes preguntas sobre esta Política de privacidad, contacta a:",
+          "nguyenanhtiep12@gmail.com"
+        ]
+      }
+    ]
+  },
   "alts": {
     "translate": "Pantalla de traducción de Hi Morse",
     "codeTable": "Pantalla de tabla de códigos de Hi Morse",

@@ -105,6 +105,138 @@
     "lead": "查看 BaTip App 的隱私與法律文件。",
     "privacyLabel": "Hi Morse 隱私權政策"
   },
+  "privacy": {
+    "title": "隱私權政策",
+    "description": "Hi Morse 隱私權政策。",
+    "eyebrow": "隱私權政策",
+    "headline": "隱私權政策",
+    "lead": "Hi Morse 是由 BaTip 開發的摩斯電碼學習與翻譯 App。本隱私權政策說明 App 會處理哪些資訊以及如何使用這些資訊。",
+    "lastUpdatedLabel": "最後更新",
+    "lastUpdated": "2026年5月13日",
+    "sections": [
+      {
+        "heading": "摘要",
+        "body": [
+          "Hi Morse 不需要帳號。摩斯文字、練習輸入、鍵盤設定、進度、最近的模式與 App 偏好會本機儲存在你的裝置上。",
+          "目前版本的 Hi Morse 不包含廣告 SDK、App 內購買、訂閱，或用於廣告的使用者追蹤。"
+        ]
+      },
+      {
+        "heading": "我們不收集的資訊",
+        "body": [
+          "Hi Morse 不收集姓名、電子郵件地址、電話號碼、聯絡人、精確位置、照片、音訊錄音、相機影像或付款資訊。",
+          "App 不會上傳你輸入、翻譯、複製、貼上或練習的摩斯文字。這些操作會在你的裝置上處理。"
+        ]
+      },
+      {
+        "heading": "儲存在你裝置上的資訊",
+        "body": [
+          "Hi Morse 可能會在你的裝置上本機儲存以下資訊:",
+          [
+            "App 語言與導覽偏好",
+            "音訊與摩斯鍵盤偏好",
+            "最近的摩斯模式",
+            "練習進度、連續記錄與答題歷史"
+          ],
+          "這些本機資料僅用於提供 App 功能，不會傳送到 BaTip 伺服器。"
+        ]
+      },
+      {
+        "heading": "剪貼簿",
+        "body": [
+          "Hi Morse 只會在你使用複製或貼上等 App 操作時存取剪貼簿。剪貼簿內容只會用於你要求的操作，不會被 App 上傳。"
+        ]
+      },
+      {
+        "heading": "手機手電筒",
+        "body": [
+          "當你選擇閃光回饋或閃光播放時，Hi Morse 可以使用裝置手電筒閃爍摩斯電碼。App 只會開啟和關閉手電筒，不會拍攝照片、影片或相機影像。"
+        ]
+      },
+      {
+        "heading": "當機報告",
+        "body": [
+          "Hi Morse 使用 Firebase Crashlytics 協助識別並修復當機與穩定性問題。Crashlytics 可能會收集診斷資訊，例如當機記錄、堆疊追蹤、App 版本、作業系統版本、裝置型號、裝置狀態，以及用於當機報告的識別碼。",
+          "這些資訊僅用於診斷並改善 App 穩定性。Hi Morse 不會將 Crashlytics 資料用於廣告。",
+          "Firebase Crashlytics 由 Google 提供。你可以在這裡了解更多 Firebase 隱私與資料處理資訊:",
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Firebase 隱私權與安全性",
+                "href": "https://firebase.google.com/support/privacy"
+              },
+              {
+                "label": "Firebase 資料揭露指南",
+                "href": "https://firebase.google.com/docs/android/play-data-disclosure"
+              },
+              {
+                "label": "Google 隱私權政策",
+                "href": "https://policies.google.com/privacy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "意見回饋郵件",
+        "body": [
+          "如果你選擇傳送意見、回報錯誤或聯絡開發者，你的電子郵件 App 可能會建立一封寄往支援電子郵件地址的訊息。該訊息可能包含 App 版本、作業系統、所選語言、目前畫面與時間戳記，以協助診斷問題。你可以在寄出前編輯或刪除這些資訊。",
+          "你傳送的電子郵件僅用於回覆你的請求並改善 App。"
+        ]
+      },
+      {
+        "heading": "第三方服務",
+        "body": [
+          "Hi Morse 可能會使用以下第三方服務:",
+          [
+            "用於當機報告與診斷的 Firebase Crashlytics",
+            "用於 App 評分與商店列表操作的 Google Play 或 Apple App Store 服務",
+            "當你選擇聯絡支援時使用的電子郵件 App 或瀏覽器"
+          ],
+          "這些第三方服務會依照其各自的隱私權政策處理資訊。"
+        ]
+      },
+      {
+        "heading": "兒童",
+        "body": [
+          "Hi Morse 是面向一般使用者的教育工具，並非特別針對 13 歲以下兒童。App 不會故意收集兒童的個人資訊。如果你認為兒童透過意見回饋郵件提供了個人資訊，請聯絡我們，以便我們刪除。"
+        ]
+      },
+      {
+        "heading": "資料保留",
+        "body": [
+          "本機 App 資料會保留在你的裝置上，直到你在 App 中刪除、清除 App 資料或解除安裝 App。",
+          "當機報告會依照 Firebase Crashlytics 的保留實務保存。意見回饋郵件僅在回覆支援請求和改善 App 所需的期間內保留。"
+        ]
+      },
+      {
+        "heading": "安全性",
+        "body": [
+          "Hi Morse 使用標準的平台與服務提供者安全措施。傳送到 Firebase 的診斷資料會透過安全連線傳輸。然而，任何傳輸或儲存方式都無法保證完全安全。"
+        ]
+      },
+      {
+        "heading": "翻譯",
+        "body": [
+          "如果本隱私權政策被翻譯成其他語言，若有任何不一致，應以英文版本為準。"
+        ]
+      },
+      {
+        "heading": "本政策的變更",
+        "body": [
+          "當 App 發生變更時，本隱私權政策可能會更新。例如，如果 Hi Morse 將來加入廣告或 App 內購買，本政策與商店資料安全聲明會在發布前更新。"
+        ]
+      },
+      {
+        "heading": "聯絡",
+        "body": [
+          "如果你對本隱私權政策有疑問，請聯絡:",
+          "nguyenanhtiep12@gmail.com"
+        ]
+      }
+    ]
+  },
   "alts": {
     "translate": "Hi Morse 翻譯畫面",
     "codeTable": "Hi Morse 代碼表畫面",
