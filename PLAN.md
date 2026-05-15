@@ -11,8 +11,8 @@
 | Phase | Scope | Status | Commit |
 | --- | --- | --- | --- |
 | 1 | Foundation: static generator, locale registry, EN/VI skeleton routes, language detection, copied Hi Morse assets | Completed | `093815f` |
-| 2 | Content: EN/VI home, Hi Morse marketing, support, legal hub, privacy policy | Completed | Pending commit |
-| 3 | Design and QA: visual polish, responsive checks, metadata, hreflang, accessibility pass | Pending | Pending |
+| 2 | Content: EN/VI home, Hi Morse marketing, support, legal hub, privacy policy | Completed | `1bd9bf8` |
+| 3 | Design and QA: visual polish, responsive checks, metadata, hreflang, accessibility pass | Completed | This commit |
 | 4 | Launch: CNAME, GitHub Pages, DNS, HTTPS, store URL updates | Out of scope now | Pending |
 
 ## Locale Registry
@@ -71,3 +71,11 @@ Deployable HTML must reference copied assets under:
 - EN/VI home, marketing, support, legal hub, and privacy content are now present.
 - Privacy content follows the current Hi Morse privacy source, including local data, clipboard use, flashlight behavior, Firebase Crashlytics, feedback email, third-party services, retention, security, translations, and contact.
 - English remains the controlling source version for translated legal content unless a translation is explicitly reviewed otherwise.
+
+## Phase 3 QA Notes
+
+- Added richer page metadata, Open Graph tags, canonical URLs, and `hreflang` alternates.
+- Added a generated 404 page.
+- Expanded the check script to validate internal links, asset references, required metadata, and generated AppleDouble cleanup.
+- Polished the app page visual system with the Hi Morse feature graphic, icon, screenshot strip, FAQ styling, and active navigation states.
+- Verified desktop and mobile layouts with Chrome DevTools Protocol screenshots. The checked 390px mobile pages have no horizontal overflow.

@@ -35,6 +35,7 @@ body {
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
@@ -86,6 +87,11 @@ a:hover {
   font-size: 0.95rem;
 }
 
+.nav-links a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 800;
+}
+
 .language-switcher {
   display: inline-flex;
   align-items: center;
@@ -130,6 +136,26 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
+.product-visual {
+  display: grid;
+  justify-items: end;
+  gap: 18px;
+}
+
+.product-visual .hero-icon {
+  margin-inline-end: 18px;
+}
+
+.feature-graphic {
+  width: min(360px, 100%);
+  height: auto;
+  aspect-ratio: 1024 / 500;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--muted);
@@ -142,8 +168,11 @@ a:hover {
 h1,
 h2,
 h3,
-p {
+p,
+li,
+.button {
   margin-top: 0;
+  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -178,11 +207,23 @@ h3 {
   padding: 24px;
 }
 
+.content-section p:last-child,
+.content-section .list:last-child,
+.content-section .faq-list:last-child {
+  margin-bottom: 0;
+}
+
 .app-card {
   display: grid;
   grid-template-columns: 80px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
+}
+
+.hero-grid > *,
+.split > *,
+.app-card > * {
+  min-width: 0;
 }
 
 .app-card img {
@@ -194,6 +235,7 @@ h3 {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 24px;
+  max-width: 100%;
 }
 
 .actions.stacked {
@@ -205,13 +247,17 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  max-width: 100%;
   min-height: 44px;
   border: 1px solid var(--ink);
   border-radius: 8px;
   background: var(--ink);
   color: var(--bg);
   font-weight: 800;
+  line-height: 1.2;
   padding: 0 18px;
+  text-align: center;
+  white-space: normal;
 }
 
 .button:hover {
@@ -242,6 +288,30 @@ h3 {
   color: var(--muted);
 }
 
+.list + p,
+p + .list {
+  margin-top: 12px;
+}
+
+.faq-list {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-list article {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.faq-list article:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.faq-list p {
+  color: var(--muted);
+}
+
 .muted-section {
   background: var(--surface-soft);
 }
@@ -263,6 +333,8 @@ h3 {
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow);
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
 }
 
 .meta-list {
@@ -326,6 +398,10 @@ h3 {
   text-align: center;
 }
 
+.fallback-page h1 {
+  margin-inline: auto;
+}
+
 @media (max-width: 760px) {
   .nav,
   .nav-links,
@@ -349,13 +425,34 @@ h3 {
     padding: 44px 0;
   }
 
+  h1 {
+    font-size: clamp(2.15rem, 10vw, 2.65rem);
+  }
+
   .hero-icon {
     width: 144px;
     height: 144px;
     border-radius: 30px;
   }
 
+  .product-visual {
+    justify-items: start;
+  }
+
+  .feature-graphic {
+    width: 100%;
+  }
+
   .screenshots {
     grid-template-columns: repeat(5, 210px);
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
   }
 }

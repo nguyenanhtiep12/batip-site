@@ -71,6 +71,7 @@ for (const locale of publishedLocales) {
 
 writeFile('robots.txt', 'User-agent: *\nAllow: /\nSitemap: https://batip.app/sitemap.xml\n');
 writeFile('sitemap.xml', renderSitemap());
+writeFile('404.html', renderNotFoundPage());
 removeAppleDoubleFiles(distDir);
 
 function readJson(relativePath) {
@@ -110,6 +111,13 @@ function renderDocument({ locale, content, pageKey, urlPath, main }) {
     <meta name="description" content="${escapeAttr(page.description)}">
     <link rel="canonical" href="${canonical}">
 ${alternateLinks}
+    <meta property="og:site_name" content="BaTip">
+    <meta property="og:title" content="${escapeAttr(`${page.title} | BaTip`)}">
+    <meta property="og:description" content="${escapeAttr(page.description)}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="${canonical}">
+    <meta property="og:image" content="${baseUrl}/assets/hi-morse/feature-graphic-1024x500.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="/assets/favicon.png">
     <link rel="stylesheet" href="/assets/styles.css">
     <script defer src="/assets/site.js"></script>
@@ -119,9 +127,9 @@ ${alternateLinks}
       <nav class="shell nav" aria-label="Primary">
         <a class="brand" href="/${locale.tag}/" aria-label="BaTip home">BaTip</a>
         <div class="nav-links">
-          <a href="/${locale.tag}/apps/hi-morse/">${escapeHtml(content.common.nav.apps)}</a>
-          <a href="/${locale.tag}/support/hi-morse/">${escapeHtml(content.common.nav.support)}</a>
-          <a href="/${locale.tag}/legal/">${escapeHtml(content.common.nav.legal)}</a>
+          ${renderNavLink(`/${locale.tag}/apps/hi-morse/`, content.common.nav.apps, urlPath)}
+          ${renderNavLink(`/${locale.tag}/support/hi-morse/`, content.common.nav.support, urlPath)}
+          ${renderNavLink(`/${locale.tag}/legal/`, content.common.nav.legal, urlPath)}
           <a href="mailto:${escapeAttr(content.common.contactEmail)}">${escapeHtml(content.common.nav.contact)}</a>
         </div>
         ${renderLanguageSwitcher({ locale, content, urlPath })}
@@ -145,6 +153,11 @@ ${main}
 `;
 }
 
+function renderNavLink(href, label, currentPath) {
+  const current = href === currentPath ? ' aria-current="page"' : '';
+  return `<a href="${escapeAttr(href)}"${current}>${escapeHtml(label)}</a>`;
+}
+
 function renderAlternateLinks(urlPath) {
   const currentTag = urlPath.split('/').filter(Boolean)[0];
   const suffix = urlPath.replace(`/${currentTag}/`, '/');
@@ -166,7 +179,7 @@ function renderLanguageSwitcher({ locale, content, urlPath }) {
 
   return `<label class="language-switcher">
           <span>${escapeHtml(content.common.language)}</span>
-          <select data-language-switcher data-current-path="${escapeAttr(urlPath)}">
+          <select aria-label="${escapeAttr(content.common.language)}" data-language-switcher data-current-path="${escapeAttr(urlPath)}">
             ${options}
           </select>
         </label>`;
@@ -181,7 +194,10 @@ function renderHome({ locale, content, app }) {
             <h1>${escapeHtml(page.headline)}</h1>
             <p class="lead">${escapeHtml(page.lead)}</p>
           </div>
-          <img class="hero-icon" src="${escapeAttr(app.icon)}" alt="Hi Morse app icon" width="192" height="192">
+          <div class="product-visual" aria-label="Hi Morse preview">
+            <img class="hero-icon" src="${escapeAttr(app.icon)}" alt="Hi Morse app icon" width="192" height="192">
+            <img class="feature-graphic" src="${escapeAttr(app.featureGraphic)}" alt="" width="1024" height="500">
+          </div>
         </div>
       </section>
       <section class="section">
@@ -226,7 +242,10 @@ function renderAppPage({ locale, content, app }) {
               <span class="button disabled" aria-disabled="true">${escapeHtml(page.appStoreComing)}</span>
             </div>
           </div>
-          <img class="hero-icon" src="${escapeAttr(app.icon)}" alt="Hi Morse app icon" width="192" height="192">
+          <div class="product-visual" aria-label="Hi Morse preview">
+            <img class="hero-icon" src="${escapeAttr(app.icon)}" alt="Hi Morse app icon" width="192" height="192">
+            <img class="feature-graphic" src="${escapeAttr(app.featureGraphic)}" alt="" width="1024" height="500">
+          </div>
         </div>
       </section>
       <section class="section">
@@ -373,6 +392,8 @@ function renderLanguageDetectPage({ publishedLocales, fallbackLocale }) {
     <title>BaTip</title>
     <meta name="description" content="BaTip apps, support, and legal documents.">
     <link rel="canonical" href="${baseUrl}/">
+${publishedLocales.map((locale) => `    <link rel="alternate" hreflang="${escapeAttr(locale.tag)}" href="${baseUrl}/${locale.tag}/">`).join('\n')}
+    <link rel="alternate" hreflang="x-default" href="${baseUrl}/">
     <link rel="stylesheet" href="/assets/styles.css">
     <script>
       const publishedLocales = ${localeData};
@@ -416,6 +437,32 @@ function renderSitemap() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((url) => `  <url><loc>${baseUrl}${url}</loc></url>`).join('\n')}
 </urlset>
+`;
+}
+
+function renderNotFoundPage() {
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page not found | BaTip</title>
+    <meta name="description" content="The requested BaTip page could not be found.">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script>
+      const pathParts = location.pathname.split('/').filter(Boolean);
+      const locale = ['en', 'vi'].includes(pathParts[0]) ? pathParts[0] : 'en';
+      document.documentElement.lang = locale;
+    </script>
+  </head>
+  <body>
+    <main class="fallback-page">
+      <p class="eyebrow">404</p>
+      <h1>Page not found</h1>
+      <p><a class="button" href="/en/">Go to BaTip</a></p>
+    </main>
+  </body>
+</html>
 `;
 }
 

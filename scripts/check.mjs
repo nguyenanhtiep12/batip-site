@@ -22,6 +22,7 @@ const requiredFiles = [
   'assets/site.js',
   'assets/hi-morse/icon-1024.png',
   'assets/hi-morse/feature-graphic-1024x500.png',
+  '404.html',
   'sitemap.xml',
   'robots.txt',
 ];
@@ -40,9 +41,32 @@ for (const file of requiredFiles.filter((entry) => entry.endsWith('.html'))) {
   const fullPath = path.join(dist, file);
   if (!existsSync(fullPath)) continue;
   const html = readFileSync(fullPath, 'utf8');
-  for (const needle of ['<title>', 'rel="canonical"', 'href="/assets/styles.css"']) {
+  const requiredNeedles = ['<title>', 'href="/assets/styles.css"'];
+  if (file !== '404.html') {
+    requiredNeedles.push('rel="canonical"', 'rel="alternate"');
+  }
+
+  for (const needle of requiredNeedles) {
     if (!html.includes(needle)) {
       console.error(`${file} missing ${needle}`);
+      failures++;
+    }
+  }
+
+  for (const href of html.matchAll(/href="([^"]+)"/g)) {
+    const target = href[1];
+    if (!target.startsWith('/') || target.startsWith('//')) continue;
+    if (!internalTargetExists(target)) {
+      console.error(`${file} links to missing ${target}`);
+      failures++;
+    }
+  }
+
+  for (const src of html.matchAll(/src="([^"]+)"/g)) {
+    const target = src[1];
+    if (!target.startsWith('/') || target.startsWith('//')) continue;
+    if (!internalTargetExists(target)) {
+      console.error(`${file} references missing ${target}`);
       failures++;
     }
   }
@@ -70,4 +94,18 @@ function listFiles(directory) {
     }
     return fullPath;
   });
+}
+
+function internalTargetExists(target) {
+  const cleanTarget = target.split('#')[0].split('?')[0];
+  if (cleanTarget === '/') {
+    return existsSync(path.join(dist, 'index.html'));
+  }
+
+  const relative = cleanTarget.replace(/^\/+/, '');
+  const direct = path.join(dist, relative);
+  if (existsSync(direct)) return true;
+
+  const index = path.join(dist, relative, 'index.html');
+  return existsSync(index);
 }
