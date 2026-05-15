@@ -36,11 +36,19 @@ Full site content is currently published for:
 ```text
 en
 vi
+ja
+ko
+zh-Hans
+zh-Hant
+es-MX
+pt-BR
+id
 ```
 
 Hi Morse store landing pages are generated for the App Store metadata and screenshot locales currently supported:
 
 ```text
+en
 vi
 ja
 ko
@@ -51,7 +59,7 @@ pt-BR
 id
 ```
 
-Landing-only locales now use localized Hi Morse marketing copy based on the reviewed App Store metadata. Localized Home, Support, Legal hub, and Privacy Policy copy is prepared in content files; the next step is publishing full routes for the App Store locale set. Outside those App Store locales, store marketing should fall back to `/en/apps/hi-morse/` / en-US metadata.
+Home, Hi Morse marketing, support, legal hub, and privacy policy pages are localized for the published App Store locale set. Outside those App Store locales, store marketing should fall back to `/en/apps/hi-morse/` / en-US metadata.
 
 ## Stable URLs
 
@@ -112,17 +120,17 @@ Deployable HTML must reference copied assets under:
 
 ## Phase 2 Content Notes
 
-- EN/VI home, marketing, support, legal hub, and privacy content are now present.
+- Home, marketing, support, legal hub, and privacy content are now present for `en`, `vi`, `ja`, `ko`, `zh-Hans`, `zh-Hant`, `es-MX`, `pt-BR`, and `id`.
 - Privacy content follows `/Volumes/Transcend/Applications/batip-legal/hi-morse/index.md`, including local data, clipboard use, flashlight behavior, Firebase Crashlytics, feedback email, third-party services, retention, security, translations, and contact.
 - English remains the controlling source version for translated legal content unless a translation is explicitly reviewed otherwise.
-- Hi Morse landing-only locales use localized marketing content. Localized Home, Support, Legal hub, and Privacy Policy copy is prepared for the App Store locale set. The English privacy policy remains the controlling source in case of translation inconsistency.
+- The English privacy policy remains the controlling source in case of translation inconsistency.
 
 ## Phase 3 QA Notes
 
 - Added richer page metadata, Open Graph tags, canonical URLs, and `hreflang` alternates.
 - Added root favicon, Apple touch icon, web app manifest, and PNG icon sizes generated from the Hi Morse app icon.
 - Added a generated 404 page.
-- Expanded the check script to validate internal links, asset references, required metadata, and generated AppleDouble cleanup.
+- Expanded the check script to validate internal links, asset references, required metadata, published locale content completeness, and generated/source AppleDouble cleanup.
 - Polished the app page visual system with the Hi Morse feature graphic, icon, screenshot strip, FAQ styling, and active navigation states.
 - Verified desktop and mobile layouts with Chrome DevTools Protocol screenshots. The checked 390px mobile pages have no horizontal overflow.
 

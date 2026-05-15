@@ -451,6 +451,11 @@ function renderLanguageDetectPage({ publishedLocales, fallbackLocale }) {
     null,
     2,
   );
+  const aliases = JSON.stringify(getLocaleAliases(), null, 2);
+  const baseAliases = JSON.stringify(getLocaleBaseAliases(), null, 2);
+  const fallbackLinks = publishedLocales
+    .map((locale) => `      <p><a href="/${locale.tag}/">${escapeHtml(locale.nativeName)}</a></p>`)
+    .join('\n');
 
   return `<!doctype html>
 <html lang="en">
@@ -470,14 +475,22 @@ ${publishedLocales.map((locale) => `    <link rel="alternate" hreflang="${escape
     <link rel="stylesheet" href="/assets/styles.css">
     <script>
       const publishedLocales = ${localeData};
+      const localeAliases = ${aliases};
+      const localeBaseAliases = ${baseAliases};
       const fallbackLocale = '${fallbackLocale}';
+      const byLowercase = new Map(publishedLocales.map((tag) => [tag.toLowerCase(), tag]));
       const normalize = (tag) => String(tag || '').replace(/_/g, '-');
       const bestMatch = (languages) => {
         for (const language of languages) {
           const normalized = normalize(language);
-          if (publishedLocales.includes(normalized)) return normalized;
-          const base = normalized.split('-')[0];
-          if (publishedLocales.includes(base)) return base;
+          const lower = normalized.toLowerCase();
+          if (byLowercase.has(lower)) return byLowercase.get(lower);
+          if (localeAliases[lower]) return localeAliases[lower];
+          if (lower.startsWith('zh-') && lower.includes('hant')) return 'zh-Hant';
+          if (lower.startsWith('zh-') && lower.includes('hans')) return 'zh-Hans';
+          const base = lower.split('-')[0];
+          if (byLowercase.has(base)) return byLowercase.get(base);
+          if (localeBaseAliases[base]) return localeBaseAliases[base];
         }
         return fallbackLocale;
       };
@@ -489,12 +502,38 @@ ${publishedLocales.map((locale) => `    <link rel="alternate" hreflang="${escape
   <body>
     <main class="fallback-page">
       <h1>BaTip</h1>
-      <p><a href="/en/">Continue in English</a></p>
-      <p><a href="/vi/">Tiếp tục bằng tiếng Việt</a></p>
+${fallbackLinks}
     </main>
   </body>
 </html>
 `;
+}
+
+function getLocaleAliases() {
+  return {
+    'en-au': 'en',
+    'en-gb': 'en',
+    'en-us': 'en',
+    'es-419': 'es-MX',
+    'zh-cn': 'zh-Hans',
+    'zh-sg': 'zh-Hans',
+    'zh-hans': 'zh-Hans',
+    'zh-hans-cn': 'zh-Hans',
+    'zh-tw': 'zh-Hant',
+    'zh-hk': 'zh-Hant',
+    'zh-mo': 'zh-Hant',
+    'zh-hant': 'zh-Hant',
+    'zh-hant-tw': 'zh-Hant',
+    'zh-hant-hk': 'zh-Hant',
+  };
+}
+
+function getLocaleBaseAliases() {
+  return {
+    es: 'es-MX',
+    pt: 'pt-BR',
+    zh: 'zh-Hans',
+  };
 }
 
 function renderAppLanguageDetectPage({ appLandingLocales, fallbackLocale }) {
@@ -503,35 +542,8 @@ function renderAppLanguageDetectPage({ appLandingLocales, fallbackLocale }) {
     null,
     2,
   );
-  const aliases = JSON.stringify(
-    {
-      'en-au': 'en',
-      'en-gb': 'en',
-      'en-us': 'en',
-      'es-419': 'es-MX',
-      'zh-cn': 'zh-Hans',
-      'zh-sg': 'zh-Hans',
-      'zh-hans': 'zh-Hans',
-      'zh-hans-cn': 'zh-Hans',
-      'zh-tw': 'zh-Hant',
-      'zh-hk': 'zh-Hant',
-      'zh-mo': 'zh-Hant',
-      'zh-hant': 'zh-Hant',
-      'zh-hant-tw': 'zh-Hant',
-      'zh-hant-hk': 'zh-Hant',
-    },
-    null,
-    2,
-  );
-  const baseAliases = JSON.stringify(
-    {
-      es: 'es-MX',
-      pt: 'pt-BR',
-      zh: 'zh-Hans',
-    },
-    null,
-    2,
-  );
+  const aliases = JSON.stringify(getLocaleAliases(), null, 2);
+  const baseAliases = JSON.stringify(getLocaleBaseAliases(), null, 2);
   const fallbackLinks = appLandingLocales
     .map((locale) => `      <p><a href="/${locale.tag}/apps/hi-morse/">${escapeHtml(locale.nativeName)}</a></p>`)
     .join('\n');
@@ -605,6 +617,12 @@ ${urls.map((url) => `  <url><loc>${baseUrl}${url}</loc></url>`).join('\n')}
 }
 
 function renderNotFoundPage() {
+  const localeData = JSON.stringify(
+    publishedLocales.map(({ tag }) => tag),
+    null,
+    2,
+  );
+
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -620,7 +638,9 @@ function renderNotFoundPage() {
     <link rel="stylesheet" href="/assets/styles.css">
     <script>
       const pathParts = location.pathname.split('/').filter(Boolean);
-      const locale = ['en', 'vi'].includes(pathParts[0]) ? pathParts[0] : 'en';
+      const publishedLocales = ${localeData};
+      const byLowercase = new Map(publishedLocales.map((tag) => [tag.toLowerCase(), tag]));
+      const locale = byLowercase.get(String(pathParts[0] || '').toLowerCase()) || 'en';
       document.documentElement.lang = locale;
     </script>
   </head>

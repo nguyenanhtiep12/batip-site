@@ -59,11 +59,19 @@ Full site content is currently published for:
 ```text
 en
 vi
+ja
+ko
+zh-Hans
+zh-Hant
+es-MX
+pt-BR
+id
 ```
 
-Hi Morse store landing pages are generated for the App Store metadata and screenshot locales currently supported:
+Hi Morse pages are generated for the App Store metadata and screenshot locales currently supported:
 
 ```text
+en
 vi
 ja
 ko
@@ -92,7 +100,7 @@ The default/fallback marketing URL remains:
 /en/apps/hi-morse/
 ```
 
-Landing-only locales now use localized Hi Morse marketing copy based on the reviewed App Store metadata. Localized Home, Support, Legal hub, and Privacy Policy copy is prepared in content files; the next step is publishing full routes for the App Store locale set.
+Home, Hi Morse marketing, support, legal hub, and privacy policy pages are localized for the published locale set. The English privacy policy remains the controlling source if a translation is inconsistent.
 
 ## Store Links
 

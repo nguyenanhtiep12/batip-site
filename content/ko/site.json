@@ -4,8 +4,8 @@
     "localeName": "한국어",
     "nav": {
       "apps": "앱",
-      "support": "지원(영어)",
-      "legal": "법적 고지(영어)",
+      "support": "지원",
+      "legal": "법적 고지",
       "contact": "문의"
     },
     "language": "언어",
@@ -40,8 +40,8 @@
     "googlePlay": "Google Play",
     "appStore": "App Store",
     "appStoreComing": "App Store 링크는 나중에 추가됩니다",
-    "supportLink": "지원(영어)",
-    "privacyLink": "개인정보 처리방침(영어)"
+    "supportLink": "지원",
+    "privacyLink": "개인정보 처리방침"
   },
   "support": {
     "title": "Hi Morse 지원",

@@ -9,6 +9,7 @@ const locales = readJson('src/data/locales.json');
 const publishedLocales = locales.filter((locale) => locale.published);
 const appLandingLocales = locales.filter((locale) => locale.published || locale.storeLanding);
 const landingOnlyLocales = appLandingLocales.filter((locale) => !locale.published);
+const requiredPublishedContentKeys = ['common', 'home', 'app', 'support', 'legal', 'privacy', 'alts'];
 
 const requiredFiles = [
   'index.html',
@@ -51,6 +52,21 @@ for (const locale of appLandingLocales) {
   if (locale.storeLanding && !locale.published && locale.contentFallback) {
     console.error(`${locale.tag} store landing must use localized content, not contentFallback`);
     failures++;
+  }
+
+  if (locale.published && existsSync(contentPath)) {
+    const content = JSON.parse(readFileSync(contentPath, 'utf8'));
+    for (const key of requiredPublishedContentKeys) {
+      if (!content[key]) {
+        console.error(`${locale.tag} published locale missing content.${key}`);
+        failures++;
+      }
+    }
+
+    if (!content.privacy?.sections?.length) {
+      console.error(`${locale.tag} published locale missing privacy sections`);
+      failures++;
+    }
   }
 }
 
@@ -100,6 +116,13 @@ for (const file of requiredFiles.filter((entry) => entry.endsWith('.html'))) {
 for (const file of listFiles(dist)) {
   if (path.basename(file).startsWith('._')) {
     console.error(`Unexpected AppleDouble file in dist: ${path.relative(dist, file)}`);
+    failures++;
+  }
+}
+
+for (const file of listFiles(path.join(root, 'content'))) {
+  if (path.basename(file).startsWith('._')) {
+    console.error(`Unexpected AppleDouble file in content: ${path.relative(root, file)}`);
     failures++;
   }
 }

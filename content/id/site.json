@@ -4,8 +4,8 @@
     "localeName": "Bahasa Indonesia",
     "nav": {
       "apps": "Aplikasi",
-      "support": "Dukungan (Inggris)",
-      "legal": "Legal (Inggris)",
+      "support": "Dukungan",
+      "legal": "Legal",
       "contact": "Kontak"
     },
     "language": "Bahasa",
@@ -40,8 +40,8 @@
     "googlePlay": "Google Play",
     "appStore": "App Store",
     "appStoreComing": "Tautan App Store akan ditambahkan nanti",
-    "supportLink": "Dukungan (Inggris)",
-    "privacyLink": "Kebijakan Privasi (Inggris)"
+    "supportLink": "Dukungan",
+    "privacyLink": "Kebijakan Privasi"
   },
   "support": {
     "title": "Dukungan Hi Morse",

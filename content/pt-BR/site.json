@@ -4,8 +4,8 @@
     "localeName": "Português (Brasil)",
     "nav": {
       "apps": "Apps",
-      "support": "Suporte (inglês)",
-      "legal": "Legal (inglês)",
+      "support": "Suporte",
+      "legal": "Legal",
       "contact": "Contato"
     },
     "language": "Idioma",
@@ -40,8 +40,8 @@
     "googlePlay": "Google Play",
     "appStore": "App Store",
     "appStoreComing": "O link da App Store será adicionado depois",
-    "supportLink": "Suporte (inglês)",
-    "privacyLink": "Política de Privacidade (inglês)"
+    "supportLink": "Suporte",
+    "privacyLink": "Política de Privacidade"
   },
   "support": {
     "title": "Suporte do Hi Morse",

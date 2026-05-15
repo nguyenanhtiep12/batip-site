@@ -4,8 +4,8 @@
     "localeName": "简体中文",
     "nav": {
       "apps": "应用",
-      "support": "支持（英文）",
-      "legal": "法律信息（英文）",
+      "support": "支持",
+      "legal": "法律信息",
       "contact": "联系"
     },
     "language": "语言",
@@ -40,8 +40,8 @@
     "googlePlay": "Google Play",
     "appStore": "App Store",
     "appStoreComing": "App Store 链接稍后添加",
-    "supportLink": "支持（英文）",
-    "privacyLink": "隐私政策（英文）"
+    "supportLink": "支持",
+    "privacyLink": "隐私政策"
   },
   "support": {
     "title": "Hi Morse 支持",

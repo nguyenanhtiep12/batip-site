@@ -4,8 +4,8 @@
     "localeName": "日本語",
     "nav": {
       "apps": "アプリ",
-      "support": "サポート（英語）",
-      "legal": "法的情報（英語）",
+      "support": "サポート",
+      "legal": "法的情報",
       "contact": "お問い合わせ"
     },
     "language": "言語",
@@ -40,8 +40,8 @@
     "googlePlay": "Google Play",
     "appStore": "App Store",
     "appStoreComing": "App Store リンクは後で追加されます",
-    "supportLink": "サポート（英語）",
-    "privacyLink": "プライバシーポリシー（英語）"
+    "supportLink": "サポート",
+    "privacyLink": "プライバシーポリシー"
   },
   "support": {
     "title": "Hi Morse サポート",

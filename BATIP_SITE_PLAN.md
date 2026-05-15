@@ -133,11 +133,20 @@ Full site content:
 ```text
 en
 vi
+ja
+ko
+zh-Hans
+zh-Hant
+es-MX
+pt-BR
+id
 ```
 
-Store landing-only locales:
+Store landing locales:
 
 ```text
+en
+vi
 ja
 ko
 zh-Hans
@@ -150,11 +159,10 @@ id
 Rules:
 
 - English is the source language.
-- Vietnamese is published from the start.
-- The current App Store metadata/screenshot locales are supported with stable landing URLs.
-- Landing-only locales use localized Hi Morse marketing copy based on the reviewed App Store metadata.
-- Localized Home, Support, Legal hub, and Privacy Policy copy is prepared for the current App Store locale set.
-- Support and legal links from landing-only locales should point to localized routes after the full locale routes are published.
+- Vietnamese and the current App Store metadata/screenshot locales are published as full site locales.
+- The current App Store metadata/screenshot locales are supported with stable landing, support, and legal URLs.
+- Localized Home, Hi Morse marketing, Support, Legal hub, and Privacy Policy copy is present for the current App Store locale set.
+- The English privacy policy remains the controlling source in case of translation inconsistency.
 - Other locales are registered for future expansion but should not be presented as reviewed legal translations until content is ready.
 - If a browser locale is not published, fall back to `/en/`.
 - If the user manually selects a language, save that choice in `localStorage`.
@@ -393,5 +401,5 @@ Then enable HTTPS in GitHub Pages when available.
 - Redirect `support.batip.app`.
 - Delete old support/legal pages.
 - Update Google Play or App Store URLs.
-- Publish unreviewed legal translations.
+- Publish legal translations without the English controlling-version note.
 - Create paid hosting or backend infrastructure.
