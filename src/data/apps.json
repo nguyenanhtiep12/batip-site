@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hi-morse",
+    "name": "Hi Morse",
+    "icon": "/assets/hi-morse/icon-1024.png",
+    "featureGraphic": "/assets/hi-morse/feature-graphic-1024x500.png",
+    "googlePlayUrl": "https://play.google.com/store/apps/details?id=app.batip.learnmorse",
+    "appStoreUrl": "",
+    "screenshots": [
+      {
+        "src": "/assets/hi-morse/screenshots/phone-01-translate.png",
+        "altKey": "translate"
+      },
+      {
+        "src": "/assets/hi-morse/screenshots/phone-02-code-table.png",
+        "altKey": "codeTable"
+      },
+      {
+        "src": "/assets/hi-morse/screenshots/phone-03-listen-practice.png",
+        "altKey": "listenPractice"
+      },
+      {
+        "src": "/assets/hi-morse/screenshots/phone-04-keyer.png",
+        "altKey": "keyer"
+      },
+      {
+        "src": "/assets/hi-morse/screenshots/phone-05-flash.png",
+        "altKey": "flash"
+      }
+    ]
+  }
+]

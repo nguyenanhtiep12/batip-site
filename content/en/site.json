@@ -1,0 +1,72 @@
+{
+  "common": {
+    "brand": "BaTip",
+    "localeName": "English",
+    "nav": {
+      "apps": "Apps",
+      "support": "Support",
+      "legal": "Legal",
+      "contact": "Contact"
+    },
+    "language": "Language",
+    "footer": "BaTip builds focused apps for learning, practice, and everyday utility.",
+    "contactEmail": "nguyenanhtiep12@gmail.com"
+  },
+  "home": {
+    "title": "BaTip",
+    "description": "The home for BaTip apps, support, and legal documents.",
+    "eyebrow": "BaTip",
+    "headline": "Simple tools, carefully made.",
+    "lead": "This new site is being prepared as the home for BaTip apps, support pages, and legal documents.",
+    "appsHeading": "Apps",
+    "appSummary": "Hi Morse helps you learn, translate, listen to, flash, and practice Morse code."
+  },
+  "app": {
+    "title": "Hi Morse",
+    "description": "Hi Morse is a focused Morse code learning and translation app.",
+    "eyebrow": "Hi Morse",
+    "headline": "Learn and practice Morse code.",
+    "lead": "A focused app for translating, listening, flashing, and practicing Morse code.",
+    "featuresHeading": "Features",
+    "features": ["Translate text and Morse code", "Listen to Morse audio", "Practice listening and dot/dash input"],
+    "screenshotsHeading": "App previews",
+    "storeLinksHeading": "Get the app",
+    "googlePlay": "Google Play",
+    "appStoreComing": "App Store link coming later",
+    "supportLink": "Support",
+    "privacyLink": "Privacy"
+  },
+  "support": {
+    "title": "Hi Morse Support",
+    "description": "Support and troubleshooting for Hi Morse.",
+    "eyebrow": "Support",
+    "headline": "Support for Hi Morse.",
+    "lead": "This page will collect support information, troubleshooting steps, and contact details for Hi Morse.",
+    "sections": []
+  },
+  "legal": {
+    "title": "Legal",
+    "description": "Legal documents for BaTip apps.",
+    "eyebrow": "Legal",
+    "headline": "Legal documents.",
+    "lead": "Review privacy and legal documents for BaTip apps.",
+    "privacyLabel": "Hi Morse Privacy Policy"
+  },
+  "privacy": {
+    "title": "Hi Morse Privacy Policy",
+    "description": "Privacy Policy for Hi Morse.",
+    "eyebrow": "Privacy Policy",
+    "headline": "Hi Morse Privacy Policy.",
+    "lead": "The full policy content will be added in Phase 2.",
+    "effectiveDate": "May 13, 2026",
+    "lastUpdated": "May 15, 2026",
+    "sections": []
+  },
+  "alts": {
+    "translate": "Hi Morse translation screen",
+    "codeTable": "Hi Morse code table screen",
+    "listenPractice": "Hi Morse listening practice screen",
+    "keyer": "Hi Morse keyer screen",
+    "flash": "Hi Morse flash feedback screen"
+  }
+}

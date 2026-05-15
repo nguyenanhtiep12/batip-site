@@ -1,0 +1,72 @@
+{
+  "common": {
+    "brand": "BaTip",
+    "localeName": "Tiếng Việt",
+    "nav": {
+      "apps": "Ứng dụng",
+      "support": "Hỗ trợ",
+      "legal": "Pháp lý",
+      "contact": "Liên hệ"
+    },
+    "language": "Ngôn ngữ",
+    "footer": "BaTip làm các ứng dụng gọn gàng cho học tập, luyện tập và tiện ích hằng ngày.",
+    "contactEmail": "nguyenanhtiep12@gmail.com"
+  },
+  "home": {
+    "title": "BaTip",
+    "description": "Trang chính cho ứng dụng, hỗ trợ và tài liệu pháp lý của BaTip.",
+    "eyebrow": "BaTip",
+    "headline": "Công cụ đơn giản, được làm cẩn thận.",
+    "lead": "Website mới này đang được chuẩn bị làm trang chính cho ứng dụng, hỗ trợ và tài liệu pháp lý của BaTip.",
+    "appsHeading": "Ứng dụng",
+    "appSummary": "Hi Morse giúp bạn học, dịch, nghe, nháy đèn và luyện tập mã Morse."
+  },
+  "app": {
+    "title": "Hi Morse",
+    "description": "Hi Morse là ứng dụng tập trung cho học và dịch mã Morse.",
+    "eyebrow": "Hi Morse",
+    "headline": "Học và luyện tập mã Morse.",
+    "lead": "Một ứng dụng gọn gàng để dịch, nghe, nháy đèn và luyện tập mã Morse.",
+    "featuresHeading": "Tính năng",
+    "features": ["Dịch văn bản và mã Morse", "Nghe âm thanh Morse", "Luyện nghe và nhập chấm/gạch"],
+    "screenshotsHeading": "Ảnh xem trước",
+    "storeLinksHeading": "Tải ứng dụng",
+    "googlePlay": "Google Play",
+    "appStoreComing": "Link App Store sẽ được thêm sau",
+    "supportLink": "Hỗ trợ",
+    "privacyLink": "Quyền riêng tư"
+  },
+  "support": {
+    "title": "Hỗ trợ Hi Morse",
+    "description": "Hỗ trợ và xử lý sự cố cho Hi Morse.",
+    "eyebrow": "Hỗ trợ",
+    "headline": "Hỗ trợ cho Hi Morse.",
+    "lead": "Trang này sẽ tập hợp thông tin hỗ trợ, các bước xử lý sự cố và cách liên hệ cho Hi Morse.",
+    "sections": []
+  },
+  "legal": {
+    "title": "Pháp lý",
+    "description": "Tài liệu pháp lý cho các ứng dụng BaTip.",
+    "eyebrow": "Pháp lý",
+    "headline": "Tài liệu pháp lý.",
+    "lead": "Xem chính sách quyền riêng tư và tài liệu pháp lý cho các ứng dụng BaTip.",
+    "privacyLabel": "Chính sách quyền riêng tư của Hi Morse"
+  },
+  "privacy": {
+    "title": "Chính sách quyền riêng tư của Hi Morse",
+    "description": "Chính sách quyền riêng tư cho Hi Morse.",
+    "eyebrow": "Chính sách quyền riêng tư",
+    "headline": "Chính sách quyền riêng tư của Hi Morse.",
+    "lead": "Nội dung đầy đủ của chính sách sẽ được thêm ở Phase 2.",
+    "effectiveDate": "13 tháng 5, 2026",
+    "lastUpdated": "15 tháng 5, 2026",
+    "sections": []
+  },
+  "alts": {
+    "translate": "Màn hình dịch của Hi Morse",
+    "codeTable": "Màn hình bảng mã Morse của Hi Morse",
+    "listenPractice": "Màn hình luyện nghe của Hi Morse",
+    "keyer": "Màn hình phím Morse của Hi Morse",
+    "flash": "Màn hình phản hồi nháy đèn của Hi Morse"
+  }
+}
