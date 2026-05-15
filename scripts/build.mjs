@@ -302,8 +302,8 @@ function renderPrivacyPage({ content }) {
           <h1>${escapeHtml(page.headline)}</h1>
           <p class="lead">${escapeHtml(page.lead)}</p>
           <dl class="meta-list">
-            <div><dt>Effective date</dt><dd>${escapeHtml(page.effectiveDate)}</dd></div>
-            <div><dt>Last updated</dt><dd>${escapeHtml(page.lastUpdated)}</dd></div>
+            <div><dt>${escapeHtml(page.effectiveDateLabel ?? 'Effective date')}</dt><dd>${escapeHtml(page.effectiveDate)}</dd></div>
+            <div><dt>${escapeHtml(page.lastUpdatedLabel ?? 'Last updated')}</dt><dd>${escapeHtml(page.lastUpdated)}</dd></div>
           </dl>
         </div>
       </section>
@@ -321,14 +321,7 @@ function renderSections(sections = []) {
 
   return sections
     .map((section) => {
-      const body = section.body
-        .map((item) => {
-          if (Array.isArray(item)) {
-            return `<ul class="list">${item.map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}</ul>`;
-          }
-          return `<p>${escapeHtml(item)}</p>`;
-        })
-        .join('');
+      const body = section.body.map(renderBodyItem).join('');
 
       return `<article class="content-section">
             <h2>${escapeHtml(section.heading)}</h2>
@@ -336,6 +329,33 @@ function renderSections(sections = []) {
           </article>`;
     })
     .join('');
+}
+
+function renderBodyItem(item) {
+  if (Array.isArray(item)) {
+    return `<ul class="list">${item.map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}</ul>`;
+  }
+
+  if (typeof item === 'object' && item !== null) {
+    if (item.type === 'links') {
+      return `<ul class="list">${item.items
+        .map((entry) => `<li><a href="${escapeAttr(entry.href)}">${escapeHtml(entry.label)}</a></li>`)
+        .join('')}</ul>`;
+    }
+
+    if (item.type === 'faqs') {
+      return `<div class="faq-list">${item.items
+        .map(
+          (entry) => `<article>
+              <h3>${escapeHtml(entry.question)}</h3>
+              <p>${escapeHtml(entry.answer)}</p>
+            </article>`,
+        )
+        .join('')}</div>`;
+    }
+  }
+
+  return `<p>${escapeHtml(item)}</p>`;
 }
 
 function renderLanguageDetectPage({ publishedLocales, fallbackLocale }) {

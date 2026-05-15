@@ -10,8 +10,8 @@
 
 | Phase | Scope | Status | Commit |
 | --- | --- | --- | --- |
-| 1 | Foundation: static generator, locale registry, EN/VI skeleton routes, language detection, copied Hi Morse assets | Completed | Pending commit |
-| 2 | Content: EN/VI home, Hi Morse marketing, support, legal hub, privacy policy | Pending | Pending |
+| 1 | Foundation: static generator, locale registry, EN/VI skeleton routes, language detection, copied Hi Morse assets | Completed | `093815f` |
+| 2 | Content: EN/VI home, Hi Morse marketing, support, legal hub, privacy policy | Completed | Pending commit |
 | 3 | Design and QA: visual polish, responsive checks, metadata, hreflang, accessibility pass | Pending | Pending |
 | 4 | Launch: CNAME, GitHub Pages, DNS, HTTPS, store URL updates | Out of scope now | Pending |
 
@@ -65,3 +65,9 @@ Deployable HTML must reference copied assets under:
 ```text
 /assets/hi-morse/
 ```
+
+## Phase 2 Content Notes
+
+- EN/VI home, marketing, support, legal hub, and privacy content are now present.
+- Privacy content follows the current Hi Morse privacy source, including local data, clipboard use, flashlight behavior, Firebase Crashlytics, feedback email, third-party services, retention, security, translations, and contact.
+- English remains the controlling source version for translated legal content unless a translation is explicitly reviewed otherwise.

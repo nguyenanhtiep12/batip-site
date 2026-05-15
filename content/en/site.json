@@ -14,10 +14,10 @@
   },
   "home": {
     "title": "BaTip",
-    "description": "The home for BaTip apps, support, and legal documents.",
+    "description": "BaTip apps, support, and legal documents.",
     "eyebrow": "BaTip",
-    "headline": "Simple tools, carefully made.",
-    "lead": "This new site is being prepared as the home for BaTip apps, support pages, and legal documents.",
+    "headline": "Focused apps for small useful skills.",
+    "lead": "BaTip makes compact tools that stay close to the task: learn something, practice it, and keep your data understandable.",
     "appsHeading": "Apps",
     "appSummary": "Hi Morse helps you learn, translate, listen to, flash, and practice Morse code."
   },
@@ -25,24 +25,76 @@
     "title": "Hi Morse",
     "description": "Hi Morse is a focused Morse code learning and translation app.",
     "eyebrow": "Hi Morse",
-    "headline": "Learn and practice Morse code.",
-    "lead": "A focused app for translating, listening, flashing, and practicing Morse code.",
-    "featuresHeading": "Features",
-    "features": ["Translate text and Morse code", "Listen to Morse audio", "Practice listening and dot/dash input"],
+    "headline": "Learn Morse code by seeing, hearing, and tapping it.",
+    "lead": "Translate text and Morse code, play audio, flash messages with your device light, and practice listening or dot/dash input in one calm app.",
+    "featuresHeading": "What you can do",
+    "features": [
+      "Translate text to Morse code and Morse code back to text.",
+      "Listen to generated Morse audio while adjusting practice rhythm.",
+      "Browse a code table for letters, numbers, and common symbols.",
+      "Practice listening recognition and dot/dash input.",
+      "Use sound, flashlight feedback, or quiet practice modes."
+    ],
     "screenshotsHeading": "App previews",
-    "storeLinksHeading": "Get the app",
+    "storeLinksHeading": "Get Hi Morse",
     "googlePlay": "Google Play",
     "appStoreComing": "App Store link coming later",
     "supportLink": "Support",
-    "privacyLink": "Privacy"
+    "privacyLink": "Privacy Policy"
   },
   "support": {
     "title": "Hi Morse Support",
-    "description": "Support and troubleshooting for Hi Morse.",
+    "description": "Support, troubleshooting, and contact details for Hi Morse.",
     "eyebrow": "Support",
     "headline": "Support for Hi Morse.",
-    "lead": "This page will collect support information, troubleshooting steps, and contact details for Hi Morse.",
-    "sections": []
+    "lead": "Use these notes for common setup checks. If something still feels off, email support with your device model and app version.",
+    "sections": [
+      {
+        "heading": "Contact",
+        "body": [
+          "For feedback, bug reports, or support questions, contact the developer by email at nguyenanhtiep12@gmail.com.",
+          "When reporting a problem, include your device model, operating system version, app version, selected language, and what you were trying to do."
+        ]
+      },
+      {
+        "heading": "Before contacting support",
+        "body": [
+          [
+            "Update to the latest version available on Google Play.",
+            "Restart the app if sound, flash, or playback seems stuck.",
+            "Check device volume if audio playback is quiet.",
+            "Check flashlight permission and device support if flash feedback is unavailable.",
+            "Try a short Morse sample first when testing audio or flashlight playback."
+          ]
+        ]
+      },
+      {
+        "heading": "FAQ",
+        "body": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "question": "Does Hi Morse need an account?",
+                "answer": "No. You can use Hi Morse without creating an account."
+              },
+              {
+                "question": "Does Hi Morse upload the Morse text I type?",
+                "answer": "No. Morse text and practice input are processed on your device."
+              },
+              {
+                "question": "Why does the app use the flashlight?",
+                "answer": "The flashlight is used only when you choose flash feedback or flash playback for Morse code."
+              },
+              {
+                "question": "Why does feedback email include device details?",
+                "answer": "Device and app details help diagnose issues. You can edit or remove that information before sending the email."
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "legal": {
     "title": "Legal",
@@ -57,10 +109,133 @@
     "description": "Privacy Policy for Hi Morse.",
     "eyebrow": "Privacy Policy",
     "headline": "Hi Morse Privacy Policy.",
-    "lead": "The full policy content will be added in Phase 2.",
+    "lead": "This policy explains what information Hi Morse handles and how it is used.",
+    "effectiveDateLabel": "Effective date",
+    "lastUpdatedLabel": "Last updated",
     "effectiveDate": "May 13, 2026",
     "lastUpdated": "May 15, 2026",
-    "sections": []
+    "sections": [
+      {
+        "heading": "Summary",
+        "body": [
+          "Hi Morse does not require an account. Morse text, practice input, keyboard settings, progress, recent patterns, and app preferences are stored locally on your device.",
+          "The current version of Hi Morse does not include advertising SDKs, in-app purchases, subscriptions, or user tracking for advertising."
+        ]
+      },
+      {
+        "heading": "Information we do not collect",
+        "body": [
+          "Hi Morse does not collect names, email addresses, phone numbers, contacts, precise location, photos, audio recordings, camera images, or payment information.",
+          "The app does not upload the Morse text you type, translate, copy, paste, or practice. Those actions are processed on your device."
+        ]
+      },
+      {
+        "heading": "Information stored on your device",
+        "body": [
+          "Hi Morse may store the following information locally on your device:",
+          [
+            "App language and navigation preferences",
+            "Audio and Morse keyboard preferences",
+            "Recent Morse patterns",
+            "Practice progress, streaks, and answer history"
+          ],
+          "This local data is used only to provide app features. It is not sent to BaTip servers."
+        ]
+      },
+      {
+        "heading": "Clipboard",
+        "body": [
+          "Hi Morse accesses the clipboard only when you use app actions such as Copy or Paste. Clipboard content is used for the action you requested and is not uploaded by the app."
+        ]
+      },
+      {
+        "heading": "Phone flashlight",
+        "body": [
+          "Hi Morse can use your device flashlight to blink Morse code when you choose flash feedback or flash playback. The app only turns the flashlight on and off. It does not capture photos, videos, or camera images."
+        ]
+      },
+      {
+        "heading": "Crash reporting",
+        "body": [
+          "Hi Morse uses Firebase Crashlytics to help identify and fix crashes and stability issues. Crashlytics may collect diagnostic information such as crash logs, stack traces, app version, operating system version, device model, device state, and identifiers used for crash reporting.",
+          "This information is used only to diagnose and improve app stability. Hi Morse does not use Crashlytics data for advertising.",
+          "Firebase Crashlytics is provided by Google. You can learn more about Firebase privacy and data handling here:",
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Firebase Privacy and Security",
+                "href": "https://firebase.google.com/support/privacy"
+              },
+              {
+                "label": "Firebase data disclosure guidance",
+                "href": "https://firebase.google.com/docs/android/play-data-disclosure"
+              },
+              {
+                "label": "Google Privacy Policy",
+                "href": "https://policies.google.com/privacy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Feedback email",
+        "body": [
+          "If you choose to send feedback, report a bug, or contact the developer, your email app may create a message addressed to the support email address. The message may include app version, operating system, selected language, current screen, and timestamp to help diagnose the issue. You can edit or remove this information before sending the email.",
+          "Emails you send are used only to respond to your request and improve the app."
+        ]
+      },
+      {
+        "heading": "Third-party services",
+        "body": [
+          "Hi Morse may use the following third-party services:",
+          [
+            "Firebase Crashlytics for crash reporting and diagnostics",
+            "Google Play or Apple App Store services for app rating and store listing actions",
+            "Your selected email app or browser when you choose to contact support"
+          ],
+          "These third-party services process information under their own privacy policies."
+        ]
+      },
+      {
+        "heading": "Children",
+        "body": [
+          "Hi Morse is a general-audience educational utility and is not directed specifically to children under 13. The app does not knowingly collect personal information from children. If you believe a child has provided personal information through a feedback email, please contact us so we can remove it."
+        ]
+      },
+      {
+        "heading": "Data retention",
+        "body": [
+          "Local app data remains on your device until you delete it in the app, clear app data, or uninstall the app.",
+          "Crash reports are retained by Firebase Crashlytics according to Firebase retention practices. Feedback emails are retained only as long as needed to respond to support requests and improve the app."
+        ]
+      },
+      {
+        "heading": "Security",
+        "body": [
+          "Hi Morse uses standard platform and service-provider security measures. Diagnostic data sent to Firebase is transmitted using secure connections. However, no method of transmission or storage is completely secure."
+        ]
+      },
+      {
+        "heading": "Translations",
+        "body": [
+          "If this Privacy Policy is translated into other languages, the English version controls in case of any inconsistency."
+        ]
+      },
+      {
+        "heading": "Changes to this policy",
+        "body": [
+          "This Privacy Policy may be updated when the app changes. For example, if Hi Morse adds advertising or in-app purchases in a future version, this policy and the store data-safety declarations will be updated before release."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "body": [
+          "If you have questions about this Privacy Policy, contact nguyenanhtiep12@gmail.com."
+        ]
+      }
+    ]
   },
   "alts": {
     "translate": "Hi Morse translation screen",

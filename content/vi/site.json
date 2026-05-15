@@ -14,10 +14,10 @@
   },
   "home": {
     "title": "BaTip",
-    "description": "Trang chính cho ứng dụng, hỗ trợ và tài liệu pháp lý của BaTip.",
+    "description": "Ứng dụng, hỗ trợ và tài liệu pháp lý của BaTip.",
     "eyebrow": "BaTip",
-    "headline": "Công cụ đơn giản, được làm cẩn thận.",
-    "lead": "Website mới này đang được chuẩn bị làm trang chính cho ứng dụng, hỗ trợ và tài liệu pháp lý của BaTip.",
+    "headline": "Ứng dụng tập trung cho những kỹ năng nhỏ mà hữu ích.",
+    "lead": "BaTip tạo ra các công cụ gọn gàng, bám sát việc cần làm: học một điều gì đó, luyện tập nó và hiểu rõ dữ liệu của mình.",
     "appsHeading": "Ứng dụng",
     "appSummary": "Hi Morse giúp bạn học, dịch, nghe, nháy đèn và luyện tập mã Morse."
   },
@@ -25,24 +25,76 @@
     "title": "Hi Morse",
     "description": "Hi Morse là ứng dụng tập trung cho học và dịch mã Morse.",
     "eyebrow": "Hi Morse",
-    "headline": "Học và luyện tập mã Morse.",
-    "lead": "Một ứng dụng gọn gàng để dịch, nghe, nháy đèn và luyện tập mã Morse.",
-    "featuresHeading": "Tính năng",
-    "features": ["Dịch văn bản và mã Morse", "Nghe âm thanh Morse", "Luyện nghe và nhập chấm/gạch"],
+    "headline": "Học mã Morse bằng cách nhìn, nghe và gõ.",
+    "lead": "Dịch văn bản và mã Morse, phát âm thanh, nháy thông điệp bằng đèn thiết bị, luyện nghe hoặc nhập chấm/gạch trong một ứng dụng gọn gàng.",
+    "featuresHeading": "Bạn có thể làm gì",
+    "features": [
+      "Dịch văn bản sang mã Morse và dịch mã Morse ngược lại thành văn bản.",
+      "Nghe âm thanh Morse được tạo từ nội dung của bạn.",
+      "Xem bảng mã cho chữ cái, chữ số và các ký hiệu phổ biến.",
+      "Luyện nhận biết bằng nghe và luyện nhập chấm/gạch.",
+      "Dùng âm thanh, phản hồi bằng đèn flash hoặc chế độ luyện tập yên lặng."
+    ],
     "screenshotsHeading": "Ảnh xem trước",
-    "storeLinksHeading": "Tải ứng dụng",
+    "storeLinksHeading": "Tải Hi Morse",
     "googlePlay": "Google Play",
     "appStoreComing": "Link App Store sẽ được thêm sau",
     "supportLink": "Hỗ trợ",
-    "privacyLink": "Quyền riêng tư"
+    "privacyLink": "Chính sách quyền riêng tư"
   },
   "support": {
     "title": "Hỗ trợ Hi Morse",
-    "description": "Hỗ trợ và xử lý sự cố cho Hi Morse.",
+    "description": "Hỗ trợ, xử lý sự cố và thông tin liên hệ cho Hi Morse.",
     "eyebrow": "Hỗ trợ",
     "headline": "Hỗ trợ cho Hi Morse.",
-    "lead": "Trang này sẽ tập hợp thông tin hỗ trợ, các bước xử lý sự cố và cách liên hệ cho Hi Morse.",
-    "sections": []
+    "lead": "Hãy dùng các ghi chú này cho những kiểm tra thường gặp. Nếu vấn đề vẫn còn, hãy gửi email hỗ trợ kèm model thiết bị và phiên bản ứng dụng.",
+    "sections": [
+      {
+        "heading": "Liên hệ",
+        "body": [
+          "Để gửi góp ý, báo lỗi hoặc câu hỏi hỗ trợ, hãy liên hệ nhà phát triển qua email nguyenanhtiep12@gmail.com.",
+          "Khi báo lỗi, hãy ghi model thiết bị, phiên bản hệ điều hành, phiên bản ứng dụng, ngôn ngữ đang chọn và thao tác bạn đang thực hiện."
+        ]
+      },
+      {
+        "heading": "Trước khi liên hệ hỗ trợ",
+        "body": [
+          [
+            "Cập nhật lên phiên bản mới nhất có trên Google Play.",
+            "Khởi động lại ứng dụng nếu âm thanh, đèn flash hoặc phát lại có vẻ bị kẹt.",
+            "Kiểm tra âm lượng thiết bị nếu âm thanh phát quá nhỏ.",
+            "Kiểm tra quyền đèn flash và khả năng hỗ trợ của thiết bị nếu phản hồi bằng đèn không hoạt động.",
+            "Thử một mẫu Morse ngắn trước khi kiểm tra phát âm thanh hoặc nháy đèn."
+          ]
+        ]
+      },
+      {
+        "heading": "Câu hỏi thường gặp",
+        "body": [
+          {
+            "type": "faqs",
+            "items": [
+              {
+                "question": "Hi Morse có cần tài khoản không?",
+                "answer": "Không. Bạn có thể dùng Hi Morse mà không cần tạo tài khoản."
+              },
+              {
+                "question": "Hi Morse có tải nội dung Morse tôi nhập lên máy chủ không?",
+                "answer": "Không. Văn bản Morse và dữ liệu luyện tập được xử lý trên thiết bị của bạn."
+              },
+              {
+                "question": "Vì sao ứng dụng dùng đèn flash?",
+                "answer": "Đèn flash chỉ được dùng khi bạn chọn phản hồi bằng đèn hoặc phát mã Morse bằng đèn."
+              },
+              {
+                "question": "Vì sao email góp ý có thể kèm thông tin thiết bị?",
+                "answer": "Thông tin thiết bị và ứng dụng giúp chẩn đoán lỗi. Bạn có thể sửa hoặc xoá thông tin đó trước khi gửi email."
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "legal": {
     "title": "Pháp lý",
@@ -57,10 +109,133 @@
     "description": "Chính sách quyền riêng tư cho Hi Morse.",
     "eyebrow": "Chính sách quyền riêng tư",
     "headline": "Chính sách quyền riêng tư của Hi Morse.",
-    "lead": "Nội dung đầy đủ của chính sách sẽ được thêm ở Phase 2.",
+    "lead": "Chính sách này giải thích Hi Morse xử lý những thông tin nào và dùng chúng ra sao.",
+    "effectiveDateLabel": "Ngày có hiệu lực",
+    "lastUpdatedLabel": "Cập nhật lần cuối",
     "effectiveDate": "13 tháng 5, 2026",
     "lastUpdated": "15 tháng 5, 2026",
-    "sections": []
+    "sections": [
+      {
+        "heading": "Tóm tắt",
+        "body": [
+          "Hi Morse không yêu cầu tài khoản. Văn bản Morse, dữ liệu luyện tập, cài đặt bàn phím, tiến trình, mẫu gần đây và tuỳ chọn ứng dụng được lưu cục bộ trên thiết bị của bạn.",
+          "Phiên bản hiện tại của Hi Morse không có SDK quảng cáo, mua hàng trong ứng dụng, gói đăng ký hoặc theo dõi người dùng cho mục đích quảng cáo."
+        ]
+      },
+      {
+        "heading": "Thông tin chúng tôi không thu thập",
+        "body": [
+          "Hi Morse không thu thập tên, địa chỉ email, số điện thoại, danh bạ, vị trí chính xác, ảnh, bản ghi âm, hình ảnh từ camera hoặc thông tin thanh toán.",
+          "Ứng dụng không tải lên văn bản Morse mà bạn nhập, dịch, sao chép, dán hoặc luyện tập. Các thao tác đó được xử lý trên thiết bị của bạn."
+        ]
+      },
+      {
+        "heading": "Thông tin lưu trên thiết bị của bạn",
+        "body": [
+          "Hi Morse có thể lưu cục bộ các thông tin sau trên thiết bị của bạn:",
+          [
+            "Ngôn ngữ ứng dụng và tuỳ chọn điều hướng",
+            "Tuỳ chọn âm thanh và bàn phím Morse",
+            "Các mẫu Morse gần đây",
+            "Tiến trình luyện tập, chuỗi ngày luyện tập và lịch sử câu trả lời"
+          ],
+          "Dữ liệu cục bộ này chỉ được dùng để cung cấp tính năng của ứng dụng. Dữ liệu này không được gửi tới máy chủ của BaTip."
+        ]
+      },
+      {
+        "heading": "Bảng nhớ tạm",
+        "body": [
+          "Hi Morse chỉ truy cập bảng nhớ tạm khi bạn dùng các thao tác như Sao chép hoặc Dán. Nội dung bảng nhớ tạm được dùng cho thao tác bạn yêu cầu và không được ứng dụng tải lên."
+        ]
+      },
+      {
+        "heading": "Đèn flash điện thoại",
+        "body": [
+          "Hi Morse có thể dùng đèn flash của thiết bị để nháy mã Morse khi bạn chọn phản hồi bằng đèn hoặc phát lại bằng đèn. Ứng dụng chỉ bật và tắt đèn flash. Ứng dụng không chụp ảnh, quay video hoặc lấy hình ảnh từ camera."
+        ]
+      },
+      {
+        "heading": "Báo cáo sự cố",
+        "body": [
+          "Hi Morse dùng Firebase Crashlytics để giúp xác định và sửa lỗi treo hoặc vấn đề ổn định. Crashlytics có thể thu thập thông tin chẩn đoán như nhật ký sự cố, stack trace, phiên bản ứng dụng, phiên bản hệ điều hành, model thiết bị, trạng thái thiết bị và mã định danh dùng cho báo cáo sự cố.",
+          "Thông tin này chỉ được dùng để chẩn đoán và cải thiện độ ổn định của ứng dụng. Hi Morse không dùng dữ liệu Crashlytics cho quảng cáo.",
+          "Firebase Crashlytics do Google cung cấp. Bạn có thể tìm hiểu thêm về quyền riêng tư và cách xử lý dữ liệu của Firebase tại:",
+          {
+            "type": "links",
+            "items": [
+              {
+                "label": "Quyền riêng tư và bảo mật của Firebase",
+                "href": "https://firebase.google.com/support/privacy"
+              },
+              {
+                "label": "Hướng dẫn khai báo dữ liệu Firebase",
+                "href": "https://firebase.google.com/docs/android/play-data-disclosure"
+              },
+              {
+                "label": "Chính sách quyền riêng tư của Google",
+                "href": "https://policies.google.com/privacy"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Email góp ý",
+        "body": [
+          "Nếu bạn chọn gửi góp ý, báo lỗi hoặc liên hệ nhà phát triển, ứng dụng email của bạn có thể tạo thư gửi tới địa chỉ hỗ trợ. Thư có thể bao gồm phiên bản ứng dụng, hệ điều hành, ngôn ngữ đang chọn, màn hình hiện tại và thời điểm gửi để giúp chẩn đoán vấn đề. Bạn có thể sửa hoặc xoá thông tin này trước khi gửi email.",
+          "Email bạn gửi chỉ được dùng để phản hồi yêu cầu hỗ trợ và cải thiện ứng dụng."
+        ]
+      },
+      {
+        "heading": "Dịch vụ bên thứ ba",
+        "body": [
+          "Hi Morse có thể dùng các dịch vụ bên thứ ba sau:",
+          [
+            "Firebase Crashlytics cho báo cáo sự cố và chẩn đoán",
+            "Dịch vụ Google Play hoặc Apple App Store cho thao tác đánh giá ứng dụng và trang cửa hàng",
+            "Ứng dụng email hoặc trình duyệt bạn chọn khi liên hệ hỗ trợ"
+          ],
+          "Các dịch vụ bên thứ ba này xử lý thông tin theo chính sách quyền riêng tư riêng của họ."
+        ]
+      },
+      {
+        "heading": "Trẻ em",
+        "body": [
+          "Hi Morse là tiện ích giáo dục dành cho người dùng nói chung và không hướng riêng tới trẻ em dưới 13 tuổi. Ứng dụng không cố ý thu thập thông tin cá nhân từ trẻ em. Nếu bạn cho rằng trẻ em đã cung cấp thông tin cá nhân qua email góp ý, vui lòng liên hệ để chúng tôi có thể xoá thông tin đó."
+        ]
+      },
+      {
+        "heading": "Lưu giữ dữ liệu",
+        "body": [
+          "Dữ liệu cục bộ của ứng dụng nằm trên thiết bị của bạn cho tới khi bạn xoá trong ứng dụng, xoá dữ liệu ứng dụng hoặc gỡ cài đặt ứng dụng.",
+          "Báo cáo sự cố được Firebase Crashlytics lưu giữ theo thực tiễn lưu giữ của Firebase. Email góp ý được lưu giữ chỉ trong thời gian cần thiết để phản hồi yêu cầu hỗ trợ và cải thiện ứng dụng."
+        ]
+      },
+      {
+        "heading": "Bảo mật",
+        "body": [
+          "Hi Morse dùng các biện pháp bảo mật tiêu chuẩn của nền tảng và nhà cung cấp dịch vụ. Dữ liệu chẩn đoán gửi tới Firebase được truyền qua kết nối bảo mật. Tuy nhiên, không có phương thức truyền hoặc lưu trữ nào an toàn tuyệt đối."
+        ]
+      },
+      {
+        "heading": "Bản dịch",
+        "body": [
+          "Nếu Chính sách quyền riêng tư này được dịch sang ngôn ngữ khác, bản tiếng Anh sẽ được ưu tiên áp dụng nếu có điểm không nhất quán."
+        ]
+      },
+      {
+        "heading": "Thay đổi chính sách",
+        "body": [
+          "Chính sách quyền riêng tư này có thể được cập nhật khi ứng dụng thay đổi. Ví dụ, nếu Hi Morse thêm quảng cáo hoặc mua hàng trong ứng dụng trong tương lai, chính sách này và khai báo an toàn dữ liệu trên cửa hàng sẽ được cập nhật trước khi phát hành."
+        ]
+      },
+      {
+        "heading": "Liên hệ",
+        "body": [
+          "Nếu bạn có câu hỏi về Chính sách quyền riêng tư này, hãy liên hệ nguyenanhtiep12@gmail.com."
+        ]
+      }
+    ]
   },
   "alts": {
     "translate": "Màn hình dịch của Hi Morse",
