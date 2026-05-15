@@ -24,6 +24,13 @@ const requiredFiles = [
   'assets/site.js',
   'assets/hi-morse/icon-1024.png',
   'assets/hi-morse/feature-graphic-1024x500.png',
+  'favicon.ico',
+  'favicon-16x16.png',
+  'favicon-32x32.png',
+  'apple-touch-icon.png',
+  'icon-192.png',
+  'icon-512.png',
+  'site.webmanifest',
   '404.html',
   'sitemap.xml',
   'robots.txt',
@@ -43,7 +50,7 @@ for (const file of requiredFiles.filter((entry) => entry.endsWith('.html'))) {
   const fullPath = path.join(dist, file);
   if (!existsSync(fullPath)) continue;
   const html = readFileSync(fullPath, 'utf8');
-  const requiredNeedles = ['<title>', 'href="/assets/styles.css"'];
+  const requiredNeedles = ['<title>', 'href="/assets/styles.css"', 'rel="icon"', 'rel="apple-touch-icon"'];
   if (file !== '404.html') {
     requiredNeedles.push('rel="canonical"', 'rel="alternate"');
   }

@@ -107,6 +107,7 @@ Deployable HTML must reference copied assets under:
 ## Phase 3 QA Notes
 
 - Added richer page metadata, Open Graph tags, canonical URLs, and `hreflang` alternates.
+- Added root favicon, Apple touch icon, web app manifest, and PNG icon sizes generated from the Hi Morse app icon.
 - Added a generated 404 page.
 - Expanded the check script to validate internal links, asset references, required metadata, and generated AppleDouble cleanup.
 - Polished the app page visual system with the Hi Morse feature graphic, icon, screenshot strip, FAQ styling, and active navigation states.

@@ -159,7 +159,12 @@ ${alternateLinks}
     <meta property="og:url" content="${canonical}">
     <meta property="og:image" content="${baseUrl}/assets/hi-morse/feature-graphic-1024x500.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="/assets/favicon.png">
+    <meta name="theme-color" content="#07130f">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/assets/styles.css">
     <script defer src="/assets/site.js"></script>
   </head>
@@ -433,9 +438,14 @@ function renderLanguageDetectPage({ publishedLocales, fallbackLocale }) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BaTip</title>
     <meta name="description" content="BaTip apps, support, and legal documents.">
+    <meta name="theme-color" content="#07130f">
     <link rel="canonical" href="${baseUrl}/">
 ${publishedLocales.map((locale) => `    <link rel="alternate" hreflang="${escapeAttr(locale.tag)}" href="${baseUrl}/${locale.tag}/">`).join('\n')}
     <link rel="alternate" hreflang="x-default" href="${baseUrl}/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/assets/styles.css">
     <script>
       const publishedLocales = ${localeData};
@@ -490,6 +500,11 @@ function renderNotFoundPage() {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page not found | BaTip</title>
     <meta name="description" content="The requested BaTip page could not be found.">
+    <meta name="theme-color" content="#07130f">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/assets/styles.css">
     <script>
       const pathParts = location.pathname.split('/').filter(Boolean);

@@ -22,6 +22,20 @@ The local server serves the generated `dist/` folder at:
 http://localhost:4173/
 ```
 
+## Site Icons
+
+The website icon set is generated from the Hi Morse 1024px app icon and published from the site root:
+
+```text
+/favicon.ico
+/favicon-16x16.png
+/favicon-32x32.png
+/apple-touch-icon.png
+/icon-192.png
+/icon-512.png
+/site.webmanifest
+```
+
 ## Launch
 
 GitHub Pages is configured with GitHub Actions. The repository contains `CNAME` with:
