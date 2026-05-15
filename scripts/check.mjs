@@ -5,19 +5,21 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
+const locales = readJson('src/data/locales.json');
+const publishedLocales = locales.filter((locale) => locale.published);
+const appLandingLocales = locales.filter((locale) => locale.published || locale.storeLanding);
+const landingOnlyLocales = appLandingLocales.filter((locale) => !locale.published);
 
 const requiredFiles = [
   'index.html',
-  'en/index.html',
-  'en/apps/hi-morse/index.html',
-  'en/support/hi-morse/index.html',
-  'en/legal/index.html',
-  'en/legal/hi-morse/privacy/index.html',
-  'vi/index.html',
-  'vi/apps/hi-morse/index.html',
-  'vi/support/hi-morse/index.html',
-  'vi/legal/index.html',
-  'vi/legal/hi-morse/privacy/index.html',
+  ...publishedLocales.flatMap((locale) => [
+    `${locale.tag}/index.html`,
+    `${locale.tag}/apps/hi-morse/index.html`,
+    `${locale.tag}/support/hi-morse/index.html`,
+    `${locale.tag}/legal/index.html`,
+    `${locale.tag}/legal/hi-morse/privacy/index.html`,
+  ]),
+  ...landingOnlyLocales.map((locale) => `${locale.tag}/apps/hi-morse/index.html`),
   'assets/styles.css',
   'assets/site.js',
   'assets/hi-morse/icon-1024.png',
@@ -83,6 +85,10 @@ if (failures > 0) {
   process.exitCode = 1;
 } else {
   console.log('Site checks passed.');
+}
+
+function readJson(relativePath) {
+  return JSON.parse(readFileSync(path.join(root, relativePath), 'utf8'));
 }
 
 function listFiles(directory) {

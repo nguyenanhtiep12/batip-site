@@ -71,6 +71,38 @@ https://batip.app/en/support/hi-morse/
 https://batip.app/en/legal/hi-morse/privacy/
 ```
 
+Current Hi Morse App Store metadata and screenshot locales:
+
+```text
+vi       Vietnam / Vietnamese
+ja       Japan / Japanese
+ko       Korea / Korean
+zh-Hans  Simplified Chinese
+zh-Hant  Taiwan and Hong Kong / Traditional Chinese
+es-MX    Mexico / Latin American Spanish
+pt-BR    Brazil / Brazilian Portuguese
+id       Indonesia / Indonesian
+```
+
+Corresponding Hi Morse landing URLs:
+
+```text
+https://batip.app/vi/apps/hi-morse/
+https://batip.app/ja/apps/hi-morse/
+https://batip.app/ko/apps/hi-morse/
+https://batip.app/zh-Hans/apps/hi-morse/
+https://batip.app/zh-Hant/apps/hi-morse/
+https://batip.app/es-MX/apps/hi-morse/
+https://batip.app/pt-BR/apps/hi-morse/
+https://batip.app/id/apps/hi-morse/
+```
+
+Locales outside this App Store set should use the English fallback/default landing page:
+
+```text
+https://batip.app/en/apps/hi-morse/
+```
+
 ## Language Strategy
 
 Use the locale list from:
@@ -93,17 +125,31 @@ ro, ru, sk, sr, sv, th, tr, uk, vi,
 zh, zh-Hans, zh-Hant, zh-Hant-HK
 ```
 
-Initial published content:
+Full site content:
 
 ```text
 en
 vi
 ```
 
+Store landing-only locales:
+
+```text
+ja
+ko
+zh-Hans
+zh-Hant
+es-MX
+pt-BR
+id
+```
+
 Rules:
 
 - English is the source language.
 - Vietnamese is published from the start.
+- The current App Store metadata/screenshot locales are supported with stable landing URLs.
+- Landing-only locales can fall back to English website copy until reviewed localized copy is added.
 - Other locales are registered for future expansion but should not be presented as reviewed legal translations until content is ready.
 - If a browser locale is not published, fall back to `/en/`.
 - If the user manually selects a language, save that choice in `localStorage`.

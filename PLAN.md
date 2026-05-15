@@ -31,14 +31,27 @@ ro, ru, sk, sr, sv, th, tr, uk, vi,
 zh, zh-Hans, zh-Hant, zh-Hant-HK
 ```
 
-Initial published locales:
+Full site content is currently published for:
 
 ```text
 en
 vi
 ```
 
-All other locales are registered for future expansion and currently fall back to English.
+Hi Morse store landing pages are generated for the App Store metadata and screenshot locales currently supported:
+
+```text
+vi
+ja
+ko
+zh-Hans
+zh-Hant
+es-MX
+pt-BR
+id
+```
+
+Landing-only locales currently use English content fallback until reviewed localized website copy is added. Outside those App Store locales, store marketing should fall back to `/en/apps/hi-morse/` / en-US metadata.
 
 ## Stable URLs
 
@@ -51,6 +64,25 @@ All other locales are registered for future expansion and currently fall back to
 ```
 
 Store URLs should use explicit locale paths, not the auto-detect root.
+
+Current Hi Morse store landing URLs:
+
+```text
+/vi/apps/hi-morse/
+/ja/apps/hi-morse/
+/ko/apps/hi-morse/
+/zh-Hans/apps/hi-morse/
+/zh-Hant/apps/hi-morse/
+/es-MX/apps/hi-morse/
+/pt-BR/apps/hi-morse/
+/id/apps/hi-morse/
+```
+
+Default/fallback:
+
+```text
+/en/apps/hi-morse/
+```
 
 ## Hi Morse Assets
 

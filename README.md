@@ -38,6 +38,42 @@ Repository Settings -> Pages -> Custom domain -> batip.app
 
 Pages source is set to GitHub Actions and HTTPS is enforced.
 
+## Locales
+
+Full site content is currently published for:
+
+```text
+en
+vi
+```
+
+Hi Morse store landing pages are generated for the App Store metadata and screenshot locales currently supported:
+
+```text
+vi
+ja
+ko
+zh-Hans
+zh-Hant
+es-MX
+pt-BR
+id
+```
+
+These landing URLs are available under:
+
+```text
+/{locale}/apps/hi-morse/
+```
+
+The default/fallback marketing URL remains:
+
+```text
+/en/apps/hi-morse/
+```
+
+Landing-only locales reuse English page content until reviewed localized website copy is added. Support and legal links from those landing pages point back to English.
+
 ## DNS
 
 The `batip.app` apex domain uses GitHub Pages `A` records:

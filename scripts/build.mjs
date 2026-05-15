@@ -11,6 +11,10 @@ const baseUrl = 'https://batip.app';
 const locales = readJson('src/data/locales.json');
 const apps = readJson('src/data/apps.json');
 const publishedLocales = locales.filter((locale) => locale.published);
+const appLandingLocales = locales.filter((locale) => locale.published || locale.storeLanding);
+const landingOnlyLocales = appLandingLocales.filter((locale) => !locale.published);
+const app = apps.find((entry) => entry.id === 'hi-morse');
+const localeContent = new Map();
 
 rmSync(distDir, { recursive: true, force: true });
 mkdirSync(distDir, { recursive: true });
@@ -25,8 +29,7 @@ writeFile(
 );
 
 for (const locale of publishedLocales) {
-  const content = readJson(`content/${locale.tag}/site.json`);
-  const app = apps.find((entry) => entry.id === 'hi-morse');
+  const content = readLocaleContent(locale);
 
   writePage({
     locale,
@@ -42,6 +45,8 @@ for (const locale of publishedLocales) {
     pageKey: 'app',
     urlPath: `/${locale.tag}/apps/hi-morse/`,
     main: renderAppPage({ locale, content, app }),
+    alternateLocales: appLandingLocales,
+    switcherLocales: appLandingLocales,
   });
 
   writePage({
@@ -69,6 +74,20 @@ for (const locale of publishedLocales) {
   });
 }
 
+for (const locale of landingOnlyLocales) {
+  const content = readLocaleContent(locale);
+
+  writePage({
+    locale,
+    content,
+    pageKey: 'app',
+    urlPath: `/${locale.tag}/apps/hi-morse/`,
+    main: renderAppPage({ locale, content, app }),
+    alternateLocales: appLandingLocales,
+    switcherLocales: appLandingLocales,
+  });
+}
+
 writeFile('robots.txt', 'User-agent: *\nAllow: /\nSitemap: https://batip.app/sitemap.xml\n');
 writeFile('sitemap.xml', renderSitemap());
 writeFile('404.html', renderNotFoundPage());
@@ -78,7 +97,23 @@ function readJson(relativePath) {
   return JSON.parse(readFileSync(path.join(root, relativePath), 'utf8'));
 }
 
-function writePage({ locale, content, pageKey, urlPath, main }) {
+function readLocaleContent(locale) {
+  const contentTag = locale.contentFallback ?? locale.tag;
+  if (!localeContent.has(contentTag)) {
+    localeContent.set(contentTag, readJson(`content/${contentTag}/site.json`));
+  }
+  return localeContent.get(contentTag);
+}
+
+function writePage({
+  locale,
+  content,
+  pageKey,
+  urlPath,
+  main,
+  alternateLocales = publishedLocales,
+  switcherLocales = publishedLocales,
+}) {
   writeFile(
     path.join(urlPath.slice(1), 'index.html'),
     renderDocument({
@@ -87,6 +122,8 @@ function writePage({ locale, content, pageKey, urlPath, main }) {
       pageKey,
       urlPath,
       main,
+      alternateLocales,
+      switcherLocales,
     }),
   );
 }
@@ -97,10 +134,14 @@ function writeFile(relativePath, contents) {
   writeFileSync(absolutePath, contents);
 }
 
-function renderDocument({ locale, content, pageKey, urlPath, main }) {
+function renderDocument({ locale, content, pageKey, urlPath, main, alternateLocales, switcherLocales }) {
   const page = content[pageKey];
   const canonical = `${baseUrl}${urlPath}`;
-  const alternateLinks = renderAlternateLinks(urlPath);
+  const alternateLinks = renderAlternateLinks(urlPath, alternateLocales);
+  const fullSiteTag = locale.published ? locale.tag : (locale.fullSiteFallback ?? 'en');
+  const appHref = `/${locale.tag}/apps/hi-morse/`;
+  const supportHref = `/${fullSiteTag}/support/hi-morse/`;
+  const legalHref = `/${fullSiteTag}/legal/`;
 
   return `<!doctype html>
 <html lang="${escapeAttr(locale.tag)}" dir="${escapeAttr(locale.dir)}">
@@ -125,14 +166,14 @@ ${alternateLinks}
   <body data-locale="${escapeAttr(locale.tag)}">
     <header class="site-header">
       <nav class="shell nav" aria-label="Primary">
-        <a class="brand" href="/${locale.tag}/" aria-label="BaTip home">BaTip</a>
+        <a class="brand" href="/${fullSiteTag}/" aria-label="BaTip home">BaTip</a>
         <div class="nav-links">
-          ${renderNavLink(`/${locale.tag}/apps/hi-morse/`, content.common.nav.apps, urlPath)}
-          ${renderNavLink(`/${locale.tag}/support/hi-morse/`, content.common.nav.support, urlPath)}
-          ${renderNavLink(`/${locale.tag}/legal/`, content.common.nav.legal, urlPath)}
+          ${renderNavLink(appHref, content.common.nav.apps, urlPath)}
+          ${renderNavLink(supportHref, content.common.nav.support, urlPath)}
+          ${renderNavLink(legalHref, content.common.nav.legal, urlPath)}
           <a href="mailto:${escapeAttr(content.common.contactEmail)}">${escapeHtml(content.common.nav.contact)}</a>
         </div>
-        ${renderLanguageSwitcher({ locale, content, urlPath })}
+        ${renderLanguageSwitcher({ locale, content, urlPath, switcherLocales })}
       </nav>
     </header>
     <main>
@@ -142,8 +183,8 @@ ${main}
       <div class="shell footer-grid">
         <p>${escapeHtml(content.common.footer)}</p>
         <div class="footer-links">
-          <a href="/${locale.tag}/support/hi-morse/">${escapeHtml(content.common.nav.support)}</a>
-          <a href="/${locale.tag}/legal/">${escapeHtml(content.common.nav.legal)}</a>
+          <a href="${supportHref}">${escapeHtml(content.common.nav.support)}</a>
+          <a href="${legalHref}">${escapeHtml(content.common.nav.legal)}</a>
           <a href="mailto:${escapeAttr(content.common.contactEmail)}">${escapeHtml(content.common.contactEmail)}</a>
         </div>
       </div>
@@ -158,10 +199,10 @@ function renderNavLink(href, label, currentPath) {
   return `<a href="${escapeAttr(href)}"${current}>${escapeHtml(label)}</a>`;
 }
 
-function renderAlternateLinks(urlPath) {
+function renderAlternateLinks(urlPath, alternateLocales) {
   const currentTag = urlPath.split('/').filter(Boolean)[0];
   const suffix = urlPath.replace(`/${currentTag}/`, '/');
-  const links = publishedLocales.map((locale) => {
+  const links = alternateLocales.map((locale) => {
     const href = `${baseUrl}/${locale.tag}${suffix}`;
     return `    <link rel="alternate" hreflang="${escapeAttr(locale.tag)}" href="${href}">`;
   });
@@ -169,8 +210,8 @@ function renderAlternateLinks(urlPath) {
   return links.join('\n');
 }
 
-function renderLanguageSwitcher({ locale, content, urlPath }) {
-  const options = publishedLocales
+function renderLanguageSwitcher({ locale, content, urlPath, switcherLocales }) {
+  const options = switcherLocales
     .map((entry) => {
       const selected = entry.tag === locale.tag ? ' selected' : '';
       return `<option value="${escapeAttr(entry.tag)}"${selected}>${escapeHtml(entry.nativeName)}</option>`;
@@ -221,6 +262,7 @@ function renderHome({ locale, content, app }) {
 
 function renderAppPage({ locale, content, app }) {
   const page = content.app;
+  const fullSiteTag = locale.published ? locale.tag : (locale.fullSiteFallback ?? 'en');
   const features = page.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join('');
   const screenshots = app.screenshots
     .map((screenshot) => {
@@ -258,8 +300,8 @@ function renderAppPage({ locale, content, app }) {
             <h2>${escapeHtml(page.storeLinksHeading)}</h2>
             <div class="actions stacked">
               <a class="button" href="${escapeAttr(app.googlePlayUrl)}">${escapeHtml(page.googlePlay)}</a>
-              <a class="button secondary" href="/${locale.tag}/support/hi-morse/">${escapeHtml(page.supportLink)}</a>
-              <a class="button secondary" href="/${locale.tag}/legal/hi-morse/privacy/">${escapeHtml(page.privacyLink)}</a>
+              <a class="button secondary" href="/${fullSiteTag}/support/hi-morse/">${escapeHtml(page.supportLink)}</a>
+              <a class="button secondary" href="/${fullSiteTag}/legal/hi-morse/privacy/">${escapeHtml(page.privacyLink)}</a>
             </div>
           </div>
         </div>
@@ -431,7 +473,7 @@ function renderSitemap() {
     `/${locale.tag}/support/hi-morse/`,
     `/${locale.tag}/legal/`,
     `/${locale.tag}/legal/hi-morse/privacy/`,
-  ])];
+  ]), ...landingOnlyLocales.map((locale) => `/${locale.tag}/apps/hi-morse/`)];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
