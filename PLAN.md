@@ -84,6 +84,15 @@ Default/fallback:
 /en/apps/hi-morse/
 ```
 
+## Store Links
+
+Hi Morse store buttons currently point to:
+
+```text
+Google Play: https://play.google.com/store/apps/details?id=app.batip.learnmorse
+App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
+```
+
 ## Hi Morse Assets
 
 Selected assets are copied from:

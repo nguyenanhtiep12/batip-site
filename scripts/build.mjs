@@ -269,6 +269,10 @@ function renderAppPage({ locale, content, app }) {
   const page = content.app;
   const fullSiteTag = locale.published ? locale.tag : (locale.fullSiteFallback ?? 'en');
   const features = page.features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join('');
+  const appStoreLabel = page.appStore ?? page.appStoreComing ?? 'App Store';
+  const appStoreButton = app.appStoreUrl
+    ? `<a class="button" href="${escapeAttr(app.appStoreUrl)}">${escapeHtml(appStoreLabel)}</a>`
+    : `<span class="button disabled" aria-disabled="true">${escapeHtml(page.appStoreComing)}</span>`;
   const screenshots = app.screenshots
     .map((screenshot) => {
       const alt = content.alts[screenshot.altKey] ?? app.name;
@@ -286,7 +290,7 @@ function renderAppPage({ locale, content, app }) {
             <p class="lead">${escapeHtml(page.lead)}</p>
             <div class="actions">
               <a class="button" href="${escapeAttr(app.googlePlayUrl)}">${escapeHtml(page.googlePlay)}</a>
-              <span class="button disabled" aria-disabled="true">${escapeHtml(page.appStoreComing)}</span>
+              ${appStoreButton}
             </div>
           </div>
           <div class="product-visual" aria-label="Hi Morse preview">
@@ -305,6 +309,7 @@ function renderAppPage({ locale, content, app }) {
             <h2>${escapeHtml(page.storeLinksHeading)}</h2>
             <div class="actions stacked">
               <a class="button" href="${escapeAttr(app.googlePlayUrl)}">${escapeHtml(page.googlePlay)}</a>
+              ${appStoreButton}
               <a class="button secondary" href="/${fullSiteTag}/support/hi-morse/">${escapeHtml(page.supportLink)}</a>
               <a class="button secondary" href="/${fullSiteTag}/legal/hi-morse/privacy/">${escapeHtml(page.privacyLink)}</a>
             </div>

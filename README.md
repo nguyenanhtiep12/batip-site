@@ -88,6 +88,15 @@ The default/fallback marketing URL remains:
 
 Landing-only locales reuse English page content until reviewed localized website copy is added. Support and legal links from those landing pages point back to English.
 
+## Store Links
+
+Hi Morse store buttons use:
+
+```text
+Google Play: https://play.google.com/store/apps/details?id=app.batip.learnmorse
+App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
+```
+
 ## DNS
 
 The `batip.app` apex domain uses GitHub Pages `A` records:

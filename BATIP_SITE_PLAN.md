@@ -192,8 +192,15 @@ Purpose:
 - Explain what Hi Morse does.
 - Show the app icon and product visuals.
 - Link to Google Play.
-- Reserve space for App Store link later.
+- Link to App Store.
 - Link to support and privacy pages.
+
+Current store links:
+
+```text
+Google Play: https://play.google.com/store/apps/details?id=app.batip.learnmorse
+App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
+```
 
 Core app description:
 
