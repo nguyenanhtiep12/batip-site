@@ -374,15 +374,24 @@ function renderLegalHub({ locale, content }) {
 
 function renderPrivacyPage({ content }) {
   const page = content.privacy;
+  const metaItems = [
+    page.effectiveDate
+      ? `<div><dt>${escapeHtml(page.effectiveDateLabel ?? 'Effective date')}</dt><dd>${escapeHtml(page.effectiveDate)}</dd></div>`
+      : '',
+    page.lastUpdated
+      ? `<div><dt>${escapeHtml(page.lastUpdatedLabel ?? 'Last updated')}</dt><dd>${escapeHtml(page.lastUpdated)}</dd></div>`
+      : '',
+  ].join('');
+  const metaList = metaItems ? `<dl class="meta-list">
+            ${metaItems}
+          </dl>` : '';
+
   return `      <section class="hero compact">
         <div class="shell">
           <p class="eyebrow">${escapeHtml(page.eyebrow)}</p>
           <h1>${escapeHtml(page.headline)}</h1>
           <p class="lead">${escapeHtml(page.lead)}</p>
-          <dl class="meta-list">
-            <div><dt>${escapeHtml(page.effectiveDateLabel ?? 'Effective date')}</dt><dd>${escapeHtml(page.effectiveDate)}</dd></div>
-            <div><dt>${escapeHtml(page.lastUpdatedLabel ?? 'Last updated')}</dt><dd>${escapeHtml(page.lastUpdated)}</dd></div>
-          </dl>
+          ${metaList}
         </div>
       </section>
       <section class="section legal-body">

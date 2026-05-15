@@ -106,15 +106,13 @@
     "privacyLabel": "Hi Morse Privacy Policy"
   },
   "privacy": {
-    "title": "Hi Morse Privacy Policy",
+    "title": "Privacy Policy",
     "description": "Privacy Policy for Hi Morse.",
     "eyebrow": "Privacy Policy",
-    "headline": "Hi Morse Privacy Policy.",
-    "lead": "This policy explains what information Hi Morse handles and how it is used.",
-    "effectiveDateLabel": "Effective date",
+    "headline": "Privacy Policy",
+    "lead": "Hi Morse is a Morse code learning and translation app developed by BaTip. This Privacy Policy explains what information the app handles and how it is used.",
     "lastUpdatedLabel": "Last updated",
-    "effectiveDate": "May 13, 2026",
-    "lastUpdated": "May 15, 2026",
+    "lastUpdated": "May 13, 2026",
     "sections": [
       {
         "heading": "Summary",
@@ -124,14 +122,14 @@
         ]
       },
       {
-        "heading": "Information we do not collect",
+        "heading": "Information We Do Not Collect",
         "body": [
           "Hi Morse does not collect names, email addresses, phone numbers, contacts, precise location, photos, audio recordings, camera images, or payment information.",
           "The app does not upload the Morse text you type, translate, copy, paste, or practice. Those actions are processed on your device."
         ]
       },
       {
-        "heading": "Information stored on your device",
+        "heading": "Information Stored on Your Device",
         "body": [
           "Hi Morse may store the following information locally on your device:",
           [
@@ -150,13 +148,13 @@
         ]
       },
       {
-        "heading": "Phone flashlight",
+        "heading": "Phone Flashlight",
         "body": [
           "Hi Morse can use your device flashlight to blink Morse code when you choose flash feedback or flash playback. The app only turns the flashlight on and off. It does not capture photos, videos, or camera images."
         ]
       },
       {
-        "heading": "Crash reporting",
+        "heading": "Crash Reporting",
         "body": [
           "Hi Morse uses Firebase Crashlytics to help identify and fix crashes and stability issues. Crashlytics may collect diagnostic information such as crash logs, stack traces, app version, operating system version, device model, device state, and identifiers used for crash reporting.",
           "This information is used only to diagnose and improve app stability. Hi Morse does not use Crashlytics data for advertising.",
@@ -181,14 +179,14 @@
         ]
       },
       {
-        "heading": "Feedback email",
+        "heading": "Feedback Email",
         "body": [
           "If you choose to send feedback, report a bug, or contact the developer, your email app may create a message addressed to the support email address. The message may include app version, operating system, selected language, current screen, and timestamp to help diagnose the issue. You can edit or remove this information before sending the email.",
           "Emails you send are used only to respond to your request and improve the app."
         ]
       },
       {
-        "heading": "Third-party services",
+        "heading": "Third-Party Services",
         "body": [
           "Hi Morse may use the following third-party services:",
           [
@@ -206,7 +204,7 @@
         ]
       },
       {
-        "heading": "Data retention",
+        "heading": "Data Retention",
         "body": [
           "Local app data remains on your device until you delete it in the app, clear app data, or uninstall the app.",
           "Crash reports are retained by Firebase Crashlytics according to Firebase retention practices. Feedback emails are retained only as long as needed to respond to support requests and improve the app."
@@ -225,7 +223,7 @@
         ]
       },
       {
-        "heading": "Changes to this policy",
+        "heading": "Changes to This Policy",
         "body": [
           "This Privacy Policy may be updated when the app changes. For example, if Hi Morse adds advertising or in-app purchases in a future version, this policy and the store data-safety declarations will be updated before release."
         ]
@@ -233,7 +231,8 @@
       {
         "heading": "Contact",
         "body": [
-          "If you have questions about this Privacy Policy, contact nguyenanhtiep12@gmail.com."
+          "If you have questions about this Privacy Policy, contact:",
+          "nguyenanhtiep12@gmail.com"
         ]
       }
     ]

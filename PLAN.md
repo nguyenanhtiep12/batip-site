@@ -113,7 +113,7 @@ Deployable HTML must reference copied assets under:
 ## Phase 2 Content Notes
 
 - EN/VI home, marketing, support, legal hub, and privacy content are now present.
-- Privacy content follows the current Hi Morse privacy source, including local data, clipboard use, flashlight behavior, Firebase Crashlytics, feedback email, third-party services, retention, security, translations, and contact.
+- Privacy content follows `/Volumes/Transcend/Applications/batip-legal/hi-morse/index.md`, including local data, clipboard use, flashlight behavior, Firebase Crashlytics, feedback email, third-party services, retention, security, translations, and contact.
 - English remains the controlling source version for translated legal content unless a translation is explicitly reviewed otherwise.
 
 ## Phase 3 QA Notes

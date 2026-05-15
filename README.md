@@ -103,6 +103,14 @@ Google Play: https://play.google.com/store/apps/details?id=app.batip.learnmorse
 App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
 ```
 
+## Legal Source
+
+The Hi Morse privacy policy content follows:
+
+```text
+/Volumes/Transcend/Applications/batip-legal/hi-morse/index.md
+```
+
 ## DNS
 
 The `batip.app` apex domain uses GitHub Pages `A` records:

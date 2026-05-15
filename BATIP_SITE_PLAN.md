@@ -250,6 +250,12 @@ URL:
 /{locale}/legal/hi-morse/privacy/
 ```
 
+Source content:
+
+```text
+/Volumes/Transcend/Applications/batip-legal/hi-morse/index.md
+```
+
 Content basis:
 
 - Hi Morse does not require an account.
@@ -258,8 +264,7 @@ Content basis:
 - Morse text/input is processed on the user's device.
 - Flashlight access is used only when the user chooses flash playback or flash feedback.
 - Include support/contact email.
-- Include `Effective date`.
-- Include `Last updated`.
+- Include the date fields present in the source policy. The current source includes `Last updated`.
 - Include translation status if needed.
 - For translated legal pages, English should remain the source version unless a translated version is explicitly reviewed.
 

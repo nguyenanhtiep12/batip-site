@@ -106,15 +106,13 @@
     "privacyLabel": "Chính sách quyền riêng tư của Hi Morse"
   },
   "privacy": {
-    "title": "Chính sách quyền riêng tư của Hi Morse",
+    "title": "Chính sách quyền riêng tư",
     "description": "Chính sách quyền riêng tư cho Hi Morse.",
     "eyebrow": "Chính sách quyền riêng tư",
-    "headline": "Chính sách quyền riêng tư của Hi Morse.",
-    "lead": "Chính sách này giải thích Hi Morse xử lý những thông tin nào và dùng chúng ra sao.",
-    "effectiveDateLabel": "Ngày có hiệu lực",
+    "headline": "Chính sách quyền riêng tư",
+    "lead": "Hi Morse là ứng dụng học và dịch mã Morse do BaTip phát triển. Chính sách quyền riêng tư này giải thích ứng dụng xử lý thông tin nào và dùng thông tin đó ra sao.",
     "lastUpdatedLabel": "Cập nhật lần cuối",
-    "effectiveDate": "13 tháng 5, 2026",
-    "lastUpdated": "15 tháng 5, 2026",
+    "lastUpdated": "13 tháng 5, 2026",
     "sections": [
       {
         "heading": "Tóm tắt",
@@ -233,7 +231,8 @@
       {
         "heading": "Liên hệ",
         "body": [
-          "Nếu bạn có câu hỏi về Chính sách quyền riêng tư này, hãy liên hệ nguyenanhtiep12@gmail.com."
+          "Nếu bạn có câu hỏi về Chính sách quyền riêng tư này, hãy liên hệ:",
+          "nguyenanhtiep12@gmail.com"
         ]
       }
     ]
