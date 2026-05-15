@@ -508,17 +508,33 @@ function renderAppLanguageDetectPage({ appLandingLocales, fallbackLocale }) {
       'en-au': 'en',
       'en-gb': 'en',
       'en-us': 'en',
+      'es-419': 'es-MX',
       'zh-cn': 'zh-Hans',
       'zh-sg': 'zh-Hans',
       'zh-hans': 'zh-Hans',
+      'zh-hans-cn': 'zh-Hans',
       'zh-tw': 'zh-Hant',
       'zh-hk': 'zh-Hant',
       'zh-mo': 'zh-Hant',
       'zh-hant': 'zh-Hant',
+      'zh-hant-tw': 'zh-Hant',
+      'zh-hant-hk': 'zh-Hant',
     },
     null,
     2,
   );
+  const baseAliases = JSON.stringify(
+    {
+      es: 'es-MX',
+      pt: 'pt-BR',
+      zh: 'zh-Hans',
+    },
+    null,
+    2,
+  );
+  const fallbackLinks = appLandingLocales
+    .map((locale) => `      <p><a href="/${locale.tag}/apps/hi-morse/">${escapeHtml(locale.nativeName)}</a></p>`)
+    .join('\n');
 
   return `<!doctype html>
 <html lang="en">
@@ -539,6 +555,7 @@ ${appLandingLocales.map((locale) => `    <link rel="alternate" hreflang="${escap
     <script>
       const appLandingLocales = ${localeData};
       const localeAliases = ${aliases};
+      const localeBaseAliases = ${baseAliases};
       const fallbackLocale = '${fallbackLocale}';
       const byLowercase = new Map(appLandingLocales.map((tag) => [tag.toLowerCase(), tag]));
       const normalize = (tag) => String(tag || '').replace(/_/g, '-');
@@ -548,8 +565,11 @@ ${appLandingLocales.map((locale) => `    <link rel="alternate" hreflang="${escap
           const lower = normalized.toLowerCase();
           if (byLowercase.has(lower)) return byLowercase.get(lower);
           if (localeAliases[lower]) return localeAliases[lower];
+          if (lower.startsWith('zh-') && lower.includes('hant')) return 'zh-Hant';
+          if (lower.startsWith('zh-') && lower.includes('hans')) return 'zh-Hans';
           const base = lower.split('-')[0];
           if (byLowercase.has(base)) return byLowercase.get(base);
+          if (localeBaseAliases[base]) return localeBaseAliases[base];
         }
         return fallbackLocale;
       };
@@ -561,8 +581,7 @@ ${appLandingLocales.map((locale) => `    <link rel="alternate" hreflang="${escap
   <body>
     <main class="fallback-page">
       <h1>Hi Morse</h1>
-      <p><a href="/en/apps/hi-morse/">Continue in English</a></p>
-      <p><a href="/vi/apps/hi-morse/">Tiếp tục bằng tiếng Việt</a></p>
+${fallbackLinks}
     </main>
   </body>
 </html>

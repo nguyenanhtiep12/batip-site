@@ -1,0 +1,44 @@
+{
+  "common": {
+    "brand": "BaTip",
+    "localeName": "Bahasa Indonesia",
+    "nav": {
+      "apps": "Aplikasi",
+      "support": "Dukungan (Inggris)",
+      "legal": "Legal (Inggris)",
+      "contact": "Kontak"
+    },
+    "language": "Bahasa",
+    "footer": "BaTip membuat aplikasi yang fokus untuk belajar, berlatih, dan membantu tugas kecil sehari-hari.",
+    "contactEmail": "nguyenanhtiep12@gmail.com"
+  },
+  "app": {
+    "title": "Hi Morse",
+    "description": "Hi Morse membantu kamu belajar dan berlatih kode Morse dalam aplikasi yang fokus dan mudah digunakan.",
+    "eyebrow": "Hi Morse",
+    "headline": "Belajar kode Morse dengan melihat, mendengar, dan mengetuk.",
+    "lead": "Ubah teks menjadi kode Morse, dekode Morse kembali menjadi teks, dengarkan audio, lihat tabel kode, dan berlatih mendengar atau memasukkan titik/garis sesuai ritmemu.",
+    "featuresHeading": "Yang bisa kamu lakukan",
+    "features": [
+      "Menerjemahkan teks ke kode Morse dan kode Morse kembali ke teks.",
+      "Mendengarkan audio Morse yang dibuat dengan ritme yang bisa diatur.",
+      "Melihat tabel kode untuk huruf, angka, dan simbol umum.",
+      "Berlatih pengenalan lewat suara dan input titik/garis.",
+      "Menggunakan suara, umpan balik lampu flash, atau mode latihan senyap."
+    ],
+    "screenshotsHeading": "Pratinjau aplikasi",
+    "storeLinksHeading": "Dapatkan Hi Morse",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
+    "appStoreComing": "Tautan App Store akan ditambahkan nanti",
+    "supportLink": "Dukungan (Inggris)",
+    "privacyLink": "Kebijakan Privasi (Inggris)"
+  },
+  "alts": {
+    "translate": "Layar terjemahan Hi Morse",
+    "codeTable": "Layar tabel kode Hi Morse",
+    "listenPractice": "Layar latihan mendengar Hi Morse",
+    "keyer": "Layar keyer Morse Hi Morse",
+    "flash": "Layar umpan balik lampu flash Hi Morse"
+  }
+}

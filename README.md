@@ -92,7 +92,7 @@ The default/fallback marketing URL remains:
 /en/apps/hi-morse/
 ```
 
-Landing-only locales reuse English page content until reviewed localized website copy is added. Support and legal links from those landing pages point back to English.
+Landing-only locales now use localized Hi Morse marketing copy based on the reviewed App Store metadata. Support and legal links from those landing pages still point back to English until reviewed support/legal translations are available.
 
 ## Store Links
 

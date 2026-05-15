@@ -1,0 +1,44 @@
+{
+  "common": {
+    "brand": "BaTip",
+    "localeName": "日本語",
+    "nav": {
+      "apps": "アプリ",
+      "support": "サポート（英語）",
+      "legal": "法的情報（英語）",
+      "contact": "お問い合わせ"
+    },
+    "language": "言語",
+    "footer": "BaTip は、学習、練習、日常の小さな用途に集中したアプリを作っています。",
+    "contactEmail": "nguyenanhtiep12@gmail.com"
+  },
+  "app": {
+    "title": "Hi Morse",
+    "description": "Hi Morse は、モールス信号を集中して楽しく学べるシンプルなアプリです。",
+    "eyebrow": "Hi Morse",
+    "headline": "見て、聞いて、タップしてモールス信号を学ぶ。",
+    "lead": "テキストをモールス信号に変換し、モールス信号をテキストに戻し、音声のリズムを聞きながら、自分のペースでリスニングと点・線入力を練習できます。",
+    "featuresHeading": "できること",
+    "features": [
+      "テキストとモールス信号を双方向に変換できます。",
+      "設定を調整しながらモールス音声を再生できます。",
+      "文字、数字、記号のコード表を確認できます。",
+      "聞き取り練習と点・線入力で認識力を伸ばせます。",
+      "音、フラッシュフィードバック、静かな練習モードを使えます。"
+    ],
+    "screenshotsHeading": "アプリのプレビュー",
+    "storeLinksHeading": "Hi Morse を入手",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
+    "appStoreComing": "App Store リンクは後で追加されます",
+    "supportLink": "サポート（英語）",
+    "privacyLink": "プライバシーポリシー（英語）"
+  },
+  "alts": {
+    "translate": "Hi Morse の翻訳画面",
+    "codeTable": "Hi Morse のコード表画面",
+    "listenPractice": "Hi Morse のリスニング練習画面",
+    "keyer": "Hi Morse のキー入力画面",
+    "flash": "Hi Morse のフラッシュフィードバック画面"
+  }
+}

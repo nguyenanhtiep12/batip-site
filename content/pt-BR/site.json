@@ -1,0 +1,44 @@
+{
+  "common": {
+    "brand": "BaTip",
+    "localeName": "Português (Brasil)",
+    "nav": {
+      "apps": "Apps",
+      "support": "Suporte (inglês)",
+      "legal": "Legal (inglês)",
+      "contact": "Contato"
+    },
+    "language": "Idioma",
+    "footer": "A BaTip cria apps focados para aprender, praticar e resolver pequenas tarefas do dia a dia.",
+    "contactEmail": "nguyenanhtiep12@gmail.com"
+  },
+  "app": {
+    "title": "Hi Morse",
+    "description": "Hi Morse ajuda você a aprender e praticar código Morse em um app focado e amigável.",
+    "eyebrow": "Hi Morse",
+    "headline": "Aprenda código Morse vendo, ouvindo e tocando.",
+    "lead": "Traduza texto para código Morse, decodifique Morse de volta para texto, ouça áudio, consulte a tabela de códigos e pratique escuta ou entrada de ponto/traço no seu ritmo.",
+    "featuresHeading": "O que você pode fazer",
+    "features": [
+      "Traduzir texto para código Morse e código Morse de volta para texto.",
+      "Ouvir áudio Morse gerado com ritmo ajustável.",
+      "Consultar uma tabela de códigos para letras, números e símbolos comuns.",
+      "Praticar reconhecimento auditivo e entrada de ponto/traço.",
+      "Usar som, resposta com flash ou modos de prática silenciosa."
+    ],
+    "screenshotsHeading": "Prévias do app",
+    "storeLinksHeading": "Baixe Hi Morse",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
+    "appStoreComing": "O link da App Store será adicionado depois",
+    "supportLink": "Suporte (inglês)",
+    "privacyLink": "Política de Privacidade (inglês)"
+  },
+  "alts": {
+    "translate": "Tela de tradução do Hi Morse",
+    "codeTable": "Tela da tabela de códigos do Hi Morse",
+    "listenPractice": "Tela de prática de escuta do Hi Morse",
+    "keyer": "Tela do manipulador Morse do Hi Morse",
+    "flash": "Tela de resposta com flash do Hi Morse"
+  }
+}

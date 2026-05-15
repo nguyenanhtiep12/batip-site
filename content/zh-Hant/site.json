@@ -1,0 +1,44 @@
+{
+  "common": {
+    "brand": "BaTip",
+    "localeName": "繁體中文",
+    "nav": {
+      "apps": "應用程式",
+      "support": "支援（英文）",
+      "legal": "法律資訊（英文）",
+      "contact": "聯絡"
+    },
+    "language": "語言",
+    "footer": "BaTip 打造專注於學習、練習與日常小工具的 App。",
+    "contactEmail": "nguyenanhtiep12@gmail.com"
+  },
+  "app": {
+    "title": "Hi Morse",
+    "description": "Hi Morse 是一款專注、友善的摩斯電碼學習與練習 App。",
+    "eyebrow": "Hi Morse",
+    "headline": "透過觀看、聆聽與點按來學習摩斯電碼。",
+    "lead": "將文字轉成摩斯電碼，也可以把摩斯電碼解碼回文字；聆聽音訊節奏、查看代碼表，並透過聽力與點/劃輸入練習逐步建立記憶。",
+    "featuresHeading": "你可以做什麼",
+    "features": [
+      "在文字與摩斯電碼之間雙向轉換。",
+      "播放摩斯音訊，並調整練習節奏。",
+      "查看字母、數字與常用符號的代碼表。",
+      "透過聽力練習與點/劃輸入提升辨識能力。",
+      "使用聲音、閃光回饋或安靜練習模式。"
+    ],
+    "screenshotsHeading": "App 預覽",
+    "storeLinksHeading": "取得 Hi Morse",
+    "googlePlay": "Google Play",
+    "appStore": "App Store",
+    "appStoreComing": "App Store 連結稍後新增",
+    "supportLink": "支援（英文）",
+    "privacyLink": "隱私權政策（英文）"
+  },
+  "alts": {
+    "translate": "Hi Morse 翻譯畫面",
+    "codeTable": "Hi Morse 代碼表畫面",
+    "listenPractice": "Hi Morse 聽力練習畫面",
+    "keyer": "Hi Morse 鍵控畫面",
+    "flash": "Hi Morse 閃光回饋畫面"
+  }
+}

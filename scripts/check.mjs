@@ -39,6 +39,21 @@ const requiredFiles = [
 
 let failures = 0;
 
+for (const locale of appLandingLocales) {
+  const contentTag = locale.contentFallback ?? locale.tag;
+  const contentPath = path.join(root, 'content', contentTag, 'site.json');
+
+  if (!existsSync(contentPath)) {
+    console.error(`Missing content/${contentTag}/site.json for ${locale.tag}`);
+    failures++;
+  }
+
+  if (locale.storeLanding && !locale.published && locale.contentFallback) {
+    console.error(`${locale.tag} store landing must use localized content, not contentFallback`);
+    failures++;
+  }
+}
+
 for (const file of requiredFiles) {
   const fullPath = path.join(dist, file);
   if (!existsSync(fullPath)) {
