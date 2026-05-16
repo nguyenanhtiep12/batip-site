@@ -381,7 +381,7 @@ function renderLegalHub({ locale, content }) {
       </section>
       <section class="section">
         <div class="shell">
-          <article class="app-card">
+          <article class="legal-card">
             <div>
               <h2>Hi Morse</h2>
               <p><a href="/${locale.tag}/legal/hi-morse/privacy/">${escapeHtml(page.privacyLabel)}</a></p>

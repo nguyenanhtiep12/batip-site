@@ -200,6 +200,7 @@ h3 {
 }
 
 .app-card,
+.legal-card,
 .content-section {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -228,6 +229,14 @@ h3 {
 
 .app-card img {
   border-radius: 18px;
+}
+
+.legal-card h2 {
+  margin-bottom: 8px;
+}
+
+.legal-card p {
+  margin-bottom: 0;
 }
 
 .actions {

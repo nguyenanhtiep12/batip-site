@@ -147,6 +147,7 @@ Deployable HTML must reference copied assets under:
 - Added a generated 404 page.
 - Expanded the check script to validate internal links, asset references, required metadata, published locale content completeness, and generated/source AppleDouble cleanup.
 - Polished the app page visual system with the Hi Morse feature graphic, icon, screenshot strip, FAQ styling, and active navigation states.
+- Fixed the legal hub document card so it no longer reuses the app icon card grid, preventing wrapped words on `/en/legal/`.
 - Verified desktop and mobile layouts with Chrome DevTools Protocol screenshots. The checked 390px mobile pages have no horizontal overflow.
 
 ## Phase 4 Launch Notes
