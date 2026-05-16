@@ -222,6 +222,20 @@ Google Play: closed testing
 
 The Google Play details URL is kept in app config for the production switch, but the public site should not expose that URL while no tester opt-in URL is configured. If a Play Console opt-in link is added later, the landing page can render a localized "Join Android test" action.
 
+Android release switches:
+
+```text
+Closed testing with no public tester link:
+googlePlayStatus = closedTesting
+
+Closed testing with a Play Console opt-in link:
+googlePlayStatus = closedTesting
+googlePlayTesterUrl = <tester opt-in URL>
+
+Production:
+googlePlayStatus = production
+```
+
 Core app description:
 
 - Learn Morse code.

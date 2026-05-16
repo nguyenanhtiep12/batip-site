@@ -105,6 +105,20 @@ App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
 
 Android is currently configured as `closedTesting` in `src/data/apps.json`. The Google Play details URL is kept in config for the production switch, but the public site does not expose it while no tester opt-in URL is configured. The rendered Android button is a localized disabled closed-testing state.
 
+Android release switches:
+
+```text
+Closed testing with no public tester link:
+googlePlayStatus = closedTesting
+
+Closed testing with a Play Console opt-in link:
+googlePlayStatus = closedTesting
+googlePlayTesterUrl = <tester opt-in URL>
+
+Production:
+googlePlayStatus = production
+```
+
 ## Hi Morse Assets
 
 Selected assets are copied from:
@@ -162,5 +176,7 @@ Deployable HTML must reference copied assets under:
 - Wait for GitHub Pages to finish DNS and certificate refresh for `www.batip.app`.
 - Re-check `https://www.batip.app/` before treating `www` as ready.
 - Review the production content at `https://batip.app/`.
+- Add `googlePlayTesterUrl` if Android closed testing should accept testers from the public site.
+- Switch `googlePlayStatus` to `production` when the Android app is publicly available.
 - After content review, update Google Play and App Store URLs to the new explicit locale paths.
 - Keep the old support and legal subdomains online until store URL changes are approved and stable.

@@ -112,6 +112,20 @@ App Store: https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456
 
 Android is currently marked as closed testing in `src/data/apps.json`. Without a tester opt-in URL, the public site renders a disabled localized "Android closed testing" button instead of linking to the Google Play details URL.
 
+Android release switches:
+
+```text
+Closed testing with no public tester link:
+googlePlayStatus = closedTesting
+
+Closed testing with a Play Console opt-in link:
+googlePlayStatus = closedTesting
+googlePlayTesterUrl = <tester opt-in URL>
+
+Production:
+googlePlayStatus = production
+```
+
 ## Legal Source
 
 The Hi Morse privacy policy content follows:
