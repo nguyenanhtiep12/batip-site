@@ -76,6 +76,8 @@ Non-locale auto-detect entry points:
 ```text
 /apps/hi-morse/
 /support/hi-morse/
+/legal/
+/legal/hi-morse/privacy/
 ```
 
 Store URLs should use explicit locale paths, not the auto-detect root.
@@ -153,6 +155,7 @@ Deployable HTML must reference copied assets under:
 - Added root favicon, Apple touch icon, web app manifest, and PNG icon sizes generated from the Hi Morse app icon.
 - Added a generated 404 page.
 - Expanded the check script to validate internal links, asset references, required metadata, published locale content completeness, and generated/source AppleDouble cleanup.
+- Added route-matrix checks so every localized public route has a matching non-locale auto-detect entry point and sitemap URL.
 - Polished the app page visual system with the Hi Morse feature graphic, icon, screenshot strip, FAQ styling, and active navigation states.
 - Fixed the legal hub document card so it no longer reuses the app icon card grid, preventing wrapped words on `/en/legal/`.
 - Verified desktop and mobile layouts with Chrome DevTools Protocol screenshots. The checked 390px mobile pages have no horizontal overflow.

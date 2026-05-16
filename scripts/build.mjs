@@ -41,6 +41,28 @@ writeFile(
     fallbackLocale: 'en',
   }),
 );
+writeFile(
+  'legal/index.html',
+  renderRouteLanguageDetectPage({
+    locales: publishedLocales,
+    fallbackLocale: 'en',
+    routePath: 'legal/',
+    title: 'Legal | BaTip',
+    description: 'Legal documents page with language detection.',
+    heading: 'Legal Documents',
+  }),
+);
+writeFile(
+  'legal/hi-morse/privacy/index.html',
+  renderRouteLanguageDetectPage({
+    locales: publishedLocales,
+    fallbackLocale: 'en',
+    routePath: 'legal/hi-morse/privacy/',
+    title: 'Privacy Policy | BaTip',
+    description: 'Hi Morse privacy policy page with language detection.',
+    heading: 'Hi Morse Privacy Policy',
+  }),
+);
 
 for (const locale of publishedLocales) {
   const content = readLocaleContent(locale);
@@ -690,8 +712,72 @@ ${fallbackLinks}
 `;
 }
 
+function renderRouteLanguageDetectPage({ locales, fallbackLocale, routePath, title, description, heading }) {
+  const localeData = JSON.stringify(
+    locales.map(({ tag }) => tag),
+    null,
+    2,
+  );
+  const aliases = JSON.stringify(getLocaleAliases(), null, 2);
+  const baseAliases = JSON.stringify(getLocaleBaseAliases(), null, 2);
+  const fallbackLinks = locales
+    .map((locale) => `      <p><a href="/${locale.tag}/${routePath}">${escapeHtml(locale.nativeName)}</a></p>`)
+    .join('\n');
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${escapeHtml(title)}</title>
+    <meta name="description" content="${escapeAttr(description)}">
+    <meta name="theme-color" content="#07130f">
+    <link rel="canonical" href="${baseUrl}/${routePath}">
+${locales.map((locale) => `    <link rel="alternate" hreflang="${escapeAttr(locale.tag)}" href="${baseUrl}/${locale.tag}/${routePath}">`).join('\n')}
+    <link rel="alternate" hreflang="x-default" href="${baseUrl}/${fallbackLocale}/${routePath}">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script>
+      const detectLocales = ${localeData};
+      const localeAliases = ${aliases};
+      const localeBaseAliases = ${baseAliases};
+      const fallbackLocale = '${fallbackLocale}';
+      const byLowercase = new Map(detectLocales.map((tag) => [tag.toLowerCase(), tag]));
+      const normalize = (tag) => String(tag || '').replace(/_/g, '-');
+      const bestMatch = (languages) => {
+        for (const language of languages) {
+          const normalized = normalize(language);
+          const lower = normalized.toLowerCase();
+          if (byLowercase.has(lower)) return byLowercase.get(lower);
+          if (localeAliases[lower]) return localeAliases[lower];
+          if (lower.startsWith('zh-') && lower.includes('hant')) return 'zh-Hant';
+          if (lower.startsWith('zh-') && lower.includes('hans')) return 'zh-Hans';
+          const base = lower.split('-')[0];
+          if (byLowercase.has(base)) return byLowercase.get(base);
+          if (localeBaseAliases[base]) return localeBaseAliases[base];
+        }
+        return fallbackLocale;
+      };
+      const saved = localStorage.getItem('batip.locale');
+      const target = bestMatch(saved ? [saved] : navigator.languages || [navigator.language]);
+      location.replace('/' + target + '/${routePath}');
+    </script>
+  </head>
+  <body>
+    <main class="fallback-page">
+      <h1>${escapeHtml(heading)}</h1>
+${fallbackLinks}
+    </main>
+  </body>
+</html>
+`;
+}
+
 function renderSitemap() {
-  const urls = ['/', '/apps/hi-morse/', '/support/hi-morse/', ...publishedLocales.flatMap((locale) => [
+  const urls = ['/', '/apps/hi-morse/', '/support/hi-morse/', '/legal/', '/legal/hi-morse/privacy/', ...publishedLocales.flatMap((locale) => [
     `/${locale.tag}/`,
     `/${locale.tag}/apps/hi-morse/`,
     `/${locale.tag}/support/hi-morse/`,

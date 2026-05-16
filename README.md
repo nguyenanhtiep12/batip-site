@@ -100,6 +100,13 @@ The non-locale support URL redirects users to the best supported full-site local
 /support/hi-morse/
 ```
 
+The non-locale legal URLs also redirect users to the best supported full-site locale:
+
+```text
+/legal/
+/legal/hi-morse/privacy/
+```
+
 The default/fallback marketing URL remains:
 
 ```text

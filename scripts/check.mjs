@@ -11,17 +11,20 @@ const publishedLocales = locales.filter((locale) => locale.published);
 const appLandingLocales = locales.filter((locale) => locale.published || locale.storeLanding);
 const landingOnlyLocales = appLandingLocales.filter((locale) => !locale.published);
 const requiredPublishedContentKeys = ['common', 'home', 'app', 'support', 'legal', 'privacy', 'alts'];
+const localizedRoutes = [
+  'apps/hi-morse',
+  'support/hi-morse',
+  'legal',
+  'legal/hi-morse/privacy',
+];
+const nonLocaleRouteEntrypoints = localizedRoutes.map((route) => `${route}/index.html`);
 
 const requiredFiles = [
   'index.html',
-  'apps/hi-morse/index.html',
-  'support/hi-morse/index.html',
+  ...nonLocaleRouteEntrypoints,
   ...publishedLocales.flatMap((locale) => [
     `${locale.tag}/index.html`,
-    `${locale.tag}/apps/hi-morse/index.html`,
-    `${locale.tag}/support/hi-morse/index.html`,
-    `${locale.tag}/legal/index.html`,
-    `${locale.tag}/legal/hi-morse/privacy/index.html`,
+    ...localizedRoutes.map((route) => `${locale.tag}/${route}/index.html`),
   ]),
   ...landingOnlyLocales.map((locale) => `${locale.tag}/apps/hi-morse/index.html`),
   'assets/styles.css',
@@ -110,6 +113,18 @@ for (const file of requiredFiles.filter((entry) => entry.endsWith('.html'))) {
     if (!target.startsWith('/') || target.startsWith('//')) continue;
     if (!internalTargetExists(target)) {
       console.error(`${file} references missing ${target}`);
+      failures++;
+    }
+  }
+}
+
+const sitemapPath = path.join(dist, 'sitemap.xml');
+if (existsSync(sitemapPath)) {
+  const sitemap = readFileSync(sitemapPath, 'utf8');
+  for (const route of localizedRoutes) {
+    const nonLocaleUrl = `https://batip.app/${route}/`;
+    if (!sitemap.includes(`<loc>${nonLocaleUrl}</loc>`)) {
+      console.error(`sitemap.xml missing non-locale route ${nonLocaleUrl}`);
       failures++;
     }
   }
