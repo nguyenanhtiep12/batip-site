@@ -94,6 +94,12 @@ The non-locale marketing URL also exists and redirects users to the best support
 /apps/hi-morse/
 ```
 
+The non-locale support URL redirects users to the best supported full-site locale:
+
+```text
+/support/hi-morse/
+```
+
 The default/fallback marketing URL remains:
 
 ```text

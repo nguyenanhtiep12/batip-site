@@ -63,6 +63,12 @@ https://batip.app/vi/legal/
 https://batip.app/vi/legal/hi-morse/privacy/
 ```
 
+The non-locale support URL detects the user's preferred language and redirects to the best published support locale:
+
+```text
+https://batip.app/support/hi-morse/
+```
+
 The stable store URLs should use explicit locale paths, not the auto-detect root. For example:
 
 ```text

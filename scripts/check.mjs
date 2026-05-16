@@ -15,6 +15,7 @@ const requiredPublishedContentKeys = ['common', 'home', 'app', 'support', 'legal
 const requiredFiles = [
   'index.html',
   'apps/hi-morse/index.html',
+  'support/hi-morse/index.html',
   ...publishedLocales.flatMap((locale) => [
     `${locale.tag}/index.html`,
     `${locale.tag}/apps/hi-morse/index.html`,

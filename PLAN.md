@@ -71,6 +71,13 @@ Home, Hi Morse marketing, support, legal hub, and privacy policy pages are local
 /{locale}/legal/hi-morse/privacy/
 ```
 
+Non-locale auto-detect entry points:
+
+```text
+/apps/hi-morse/
+/support/hi-morse/
+```
+
 Store URLs should use explicit locale paths, not the auto-detect root.
 
 Current Hi Morse store landing URLs:
