@@ -310,6 +310,9 @@ function renderAppPage({ locale, content, app }) {
   const appStoreButton = app.appStoreUrl
     ? `<a class="button" href="${escapeAttr(app.appStoreUrl)}">${escapeHtml(appStoreLabel)}</a>`
     : `<span class="button disabled" aria-disabled="true">${escapeHtml(page.appStoreComing)}</span>`;
+  const webAppButton = app.webAppUrl
+    ? `<a class="button secondary" href="${escapeAttr(app.webAppUrl)}">${escapeHtml(page.webApp ?? 'Open web app')}</a>`
+    : '';
   const screenshots = app.screenshots
     .map((screenshot) => {
       const alt = content.alts[screenshot.altKey] ?? app.name;
@@ -328,6 +331,7 @@ function renderAppPage({ locale, content, app }) {
             <div class="actions">
               ${googlePlayButton}
               ${appStoreButton}
+              ${webAppButton}
             </div>
           </div>
           <div class="product-visual" aria-label="Hi Morse preview">
@@ -347,6 +351,7 @@ function renderAppPage({ locale, content, app }) {
             <div class="actions stacked">
               ${googlePlayButton}
               ${appStoreButton}
+              ${webAppButton}
               <a class="button secondary" href="/${fullSiteTag}/support/hi-morse/">${escapeHtml(page.supportLink)}</a>
               <a class="button secondary" href="/${fullSiteTag}/legal/hi-morse/privacy/">${escapeHtml(page.privacyLink)}</a>
             </div>

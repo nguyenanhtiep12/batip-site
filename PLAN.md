@@ -165,6 +165,10 @@ Deployable HTML must reference copied assets under:
 - Added root `CNAME` with `batip.app`.
 - Added GitHub Actions workflow at `.github/workflows/pages.yml`.
 - The workflow builds `dist/`, runs checks, uploads the Pages artifact, and deploys with `actions/deploy-pages`.
+- Added Hi Morse Flutter web automation. The Pages workflow checks out
+  `nguyenanhtiep12/Learn-Morse`, installs Flutter, builds the app with base href
+  `/apps/hi-morse/web/`, and includes the output in `dist/apps/hi-morse/web/`.
+- Added a landing-page "Open web app" action for all published site locales.
 - GitHub Pages source is set to GitHub Actions in the repository UI.
 - Custom domain is set to `batip.app` in GitHub Pages Settings.
 - DNS for `batip.app` points the apex domain to GitHub Pages:

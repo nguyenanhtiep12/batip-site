@@ -7,6 +7,7 @@
     "googlePlayStatus": "closedTesting",
     "googlePlayUrl": "https://play.google.com/store/apps/details?id=app.batip.learnmorse",
     "appStoreUrl": "https://apps.apple.com/app/hi-morse-learn-morse-code/id6768256456",
+    "webAppUrl": "/apps/hi-morse/web/",
     "screenshots": [
       {
         "src": "/assets/hi-morse/screenshots/phone-01-translate.png",

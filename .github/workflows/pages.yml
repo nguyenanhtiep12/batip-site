@@ -4,7 +4,15 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
+    types:
+      - hi-morse-web
   workflow_dispatch:
+    inputs:
+      hi_morse_ref:
+        description: Hi Morse git ref to build
+        required: false
+        default: main
 
 permissions:
   contents: read
@@ -22,12 +30,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Checkout Hi Morse
+        uses: actions/checkout@v4
+        with:
+          repository: nguyenanhtiep12/Learn-Morse
+          ref: ${{ github.event.client_payload.ref || github.event.inputs.hi_morse_ref || 'main' }}
+          path: Learn-Morse
+          token: ${{ secrets.HI_MORSE_REPOSITORY_TOKEN || github.token }}
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
       - name: Build
+        env:
+          HI_MORSE_SOURCE: ${{ github.workspace }}/Learn-Morse/learn_morse
         run: npm run build
 
       - name: Check

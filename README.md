@@ -22,6 +22,54 @@ The local server serves the generated `dist/` folder at:
 http://localhost:4173/
 ```
 
+## Hi Morse Web App
+
+The site build also builds the Flutter web version of Hi Morse and publishes it
+inside the Pages artifact at:
+
+```text
+/apps/hi-morse/web/
+```
+
+`npm run build` expects the Hi Morse Flutter project at the sibling checkout:
+
+```text
+/Volumes/Transcend/Applications/Learn-Morse/learn_morse
+```
+
+Override that location when needed:
+
+```sh
+HI_MORSE_SOURCE=/absolute/path/to/learn_morse npm run build
+```
+
+The Flutter build uses this base href:
+
+```text
+/apps/hi-morse/web/
+```
+
+GitHub Pages automation checks out `nguyenanhtiep12/Learn-Morse`, installs
+Flutter, builds the site, builds the Flutter web app, runs checks, and deploys
+`dist/`.
+
+If `Learn-Morse` is private, configure this secret in `batip-site`:
+
+```text
+HI_MORSE_REPOSITORY_TOKEN
+```
+
+To deploy the site automatically after pushing Hi Morse app code, configure
+this secret in `Learn-Morse`:
+
+```text
+BATIP_SITE_DISPATCH_TOKEN
+```
+
+That token should be able to call `repository_dispatch` on
+`nguyenanhtiep12/batip-site`. After it is configured, pushing `main` in
+`Learn-Morse` triggers the `batip-site` Pages workflow for that exact commit.
+
 ## Site Icons
 
 The website icon set is generated from the Hi Morse 1024px app icon and published from the site root:

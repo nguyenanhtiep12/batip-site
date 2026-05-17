@@ -41,6 +41,10 @@ const requiredFiles = [
   '404.html',
   'sitemap.xml',
   'robots.txt',
+  'apps/hi-morse/web/index.html',
+  'apps/hi-morse/web/flutter_bootstrap.js',
+  'apps/hi-morse/web/main.dart.js',
+  'apps/hi-morse/web/manifest.json',
 ];
 
 let failures = 0;
@@ -83,7 +87,7 @@ for (const file of requiredFiles) {
   }
 }
 
-for (const file of requiredFiles.filter((entry) => entry.endsWith('.html'))) {
+for (const file of requiredFiles.filter((entry) => entry.endsWith('.html') && !entry.startsWith('apps/hi-morse/web/'))) {
   const fullPath = path.join(dist, file);
   if (!existsSync(fullPath)) continue;
   const html = readFileSync(fullPath, 'utf8');

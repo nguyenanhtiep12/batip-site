@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/build-all.mjs",
+    "build:site": "node scripts/build.mjs",
+    "build:hi-morse-web": "node scripts/build-hi-morse-web.mjs",
     "serve": "node scripts/serve.mjs",
     "check": "node scripts/check.mjs"
   }

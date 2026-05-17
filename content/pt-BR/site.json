@@ -43,6 +43,7 @@
     "googlePlayUnavailable": "O link do Google Play será adicionado depois",
     "appStore": "App Store",
     "appStoreComing": "O link da App Store será adicionado depois",
+    "webApp": "Abrir app web",
     "supportLink": "Suporte",
     "privacyLink": "Política de Privacidade"
   },
